@@ -24,13 +24,12 @@ The dashboard covers total and non-vote TPS, slot performance, fees, epoch progr
 - Run `pnpm preflight`; do not submit unless it exits successfully with zero blockers.
 - Review reports/latest.md for stale or partial source warnings.
 
-Eligibility: PENDING CONFIRMATION
+Eligibility: CONFIRMED by entrant on 2026-08-31 (Canada-only bounty)
 
 ## Links to provide
 
-- Public repository: PENDING APPROVAL
-- Private review dashboard: https://sol-pulse-solana-intelligence.pdrucker48.chatgpt.site
-- Public hosted dashboard: PENDING APPROVAL
+- Public repository: https://github.com/pdrucker48-lab/solana-ecosystem-pulse
+- Public hosted dashboard: https://sol-pulse-solana-intelligence.pdrucker48.chatgpt.site
 - Sample Markdown report: reports/latest.md
 - Sample JSON report: reports/latest.json
 - Standalone Python report: reports/python-latest.md and reports/python-latest.json

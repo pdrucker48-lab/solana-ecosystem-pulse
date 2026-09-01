@@ -179,10 +179,10 @@ const bullets = (items, empty) =>
   items.length ? items.map((item) => `- ${item}`).join('\n') : `- ${empty}`;
 const report = `# SOL//PULSE pre-submission review
 
-Generated: ${new Date().toISOString()}  
-Mode: ${allowPrivate ? 'private review' : 'final submission'}  
-Evidence: ${snapshotPath}  
-Verdict: **${verdict}**  
+Generated: ${new Date().toISOString()}
+Mode: ${allowPrivate ? 'private review' : 'final submission'}
+Evidence: ${snapshotPath}
+Verdict: **${verdict}**
 Rubric score: **${score}/100**
 
 ## Weighted critique
