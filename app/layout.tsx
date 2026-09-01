@@ -13,7 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      'https://sol-pulse-solana-intelligence.pdrucker48.chatgpt.site',
+  ),
   title: 'SOL//PULSE — Solana Ecosystem Intelligence',
   description:
     'An automatically updating view of Solana network health, validators, economic activity, and ecosystem signals.',
