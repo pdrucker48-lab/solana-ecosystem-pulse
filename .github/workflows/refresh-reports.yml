@@ -1,0 +1,26 @@
+name: Refresh reports
+
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python scripts/solpulse.py
+      - name: Commit refreshed reports
+        run: |
+          git config user.name "sol-pulse-bot"
+          git config user.email "sol-pulse-bot@users.noreply.github.com"
+          git add reports/python-latest.json reports/python-latest.md
+          git diff --cached --quiet || git commit -m "chore: refresh ecosystem reports"
+          git push
