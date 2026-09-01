@@ -26,11 +26,21 @@ The dashboard covers TPS and slot performance, epoch progress, validator partici
 ## Links to provide
 
 - Public repository: PENDING APPROVAL
-- Hosted dashboard: PENDING APPROVAL
+- Private review dashboard: https://sol-pulse-solana-intelligence.pdrucker48.chatgpt.site
+- Public hosted dashboard: PENDING APPROVAL
 - Sample Markdown report: reports/latest.md
 - Sample JSON report: reports/latest.json
 - Live Markdown endpoint: /api/report/markdown
 - Live JSON endpoint: /api/report/json
+
+## Reviewer checklist
+
+- Confirm the dashboard opens and identifies each upstream source.
+- Change the 24H, 7D, and 30D liquidity ranges.
+- Change the automatic refresh interval and use the manual refresh control.
+- Download both Markdown and JSON reports.
+- Check the validator table, anomaly signals, and Agave release links.
+- Confirm the private review copy is ready to be made public.
 
 ## Accuracy note
 
