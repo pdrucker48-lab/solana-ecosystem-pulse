@@ -1,0 +1,326 @@
+{
+  "generatedAt": "2026-09-01T00:55:47.912Z",
+  "state": "live",
+  "briefing": "Solana is operating normally with stable throughput and healthy validator participation.",
+  "network": {
+    "tps": 4095.616666666667,
+    "slotTimeMs": 314.13612565445027,
+    "blockHeight": 421340234,
+    "epoch": 1026,
+    "epochProgress": 14.033101851851852,
+    "epochEtaSeconds": 116662.93193717278,
+    "activeValidators": 681,
+    "delinquentValidators": 13,
+    "delinquentPercent": 1.8731988472622478,
+    "supplySol": 617200000
+  },
+  "economy": {
+    "solPrice": 103.24,
+    "solPriceChange24h": 0.9212544742152038,
+    "tvl": 5962558370,
+    "tvlChange1d": 0.026006993722095924,
+    "tvlChange7d": 3.926402509269735,
+    "tvlChange30d": 26.345784241918413,
+    "dexVolume24h": 2101451762.73,
+    "dexVolume7d": 15809678829.999996,
+    "stablecoinSupply": 16058735447.33
+  },
+  "performance": [
+    {
+      "label": "11m",
+      "tps": 4185.566666666667,
+      "slotTimeMs": 314.13612565445027
+    },
+    {
+      "label": "10m",
+      "tps": 4542.916666666667,
+      "slotTimeMs": 309.27835051546396
+    },
+    {
+      "label": "9m",
+      "tps": 4189.516666666666,
+      "slotTimeMs": 314.13612565445027
+    },
+    {
+      "label": "8m",
+      "tps": 3991.0833333333335,
+      "slotTimeMs": 315.7894736842105
+    },
+    {
+      "label": "7m",
+      "tps": 3804.133333333333,
+      "slotTimeMs": 322.5806451612903
+    },
+    {
+      "label": "6m",
+      "tps": 3538.366666666667,
+      "slotTimeMs": 326.0869565217391
+    },
+    {
+      "label": "5m",
+      "tps": 3702.45,
+      "slotTimeMs": 315.7894736842105
+    },
+    {
+      "label": "4m",
+      "tps": 3682.0666666666666,
+      "slotTimeMs": 322.5806451612903
+    },
+    {
+      "label": "3m",
+      "tps": 4317.55,
+      "slotTimeMs": 314.13612565445027
+    },
+    {
+      "label": "2m",
+      "tps": 3924.9666666666667,
+      "slotTimeMs": 317.46031746031747
+    },
+    {
+      "label": "1m",
+      "tps": 3913.016666666667,
+      "slotTimeMs": 317.46031746031747
+    },
+    {
+      "label": "now",
+      "tps": 4095.616666666667,
+      "slotTimeMs": 314.13612565445027
+    }
+  ],
+  "tvlHistory": [
+    {
+      "date": "2026-08-02",
+      "tvl": 4719238086
+    },
+    {
+      "date": "2026-08-03",
+      "tvl": 4742273413
+    },
+    {
+      "date": "2026-08-04",
+      "tvl": 4764777445
+    },
+    {
+      "date": "2026-08-05",
+      "tvl": 4805262930
+    },
+    {
+      "date": "2026-08-06",
+      "tvl": 4805431342
+    },
+    {
+      "date": "2026-08-07",
+      "tvl": 4722472968
+    },
+    {
+      "date": "2026-08-08",
+      "tvl": 4749100555
+    },
+    {
+      "date": "2026-08-09",
+      "tvl": 4808300364
+    },
+    {
+      "date": "2026-08-10",
+      "tvl": 4854015088
+    },
+    {
+      "date": "2026-08-11",
+      "tvl": 4839226649
+    },
+    {
+      "date": "2026-08-12",
+      "tvl": 4863310139
+    },
+    {
+      "date": "2026-08-13",
+      "tvl": 4823175760
+    },
+    {
+      "date": "2026-08-14",
+      "tvl": 4837139573
+    },
+    {
+      "date": "2026-08-15",
+      "tvl": 4816712953
+    },
+    {
+      "date": "2026-08-16",
+      "tvl": 4808833924
+    },
+    {
+      "date": "2026-08-17",
+      "tvl": 4777052173
+    },
+    {
+      "date": "2026-08-18",
+      "tvl": 4849717373
+    },
+    {
+      "date": "2026-08-19",
+      "tvl": 4896825844
+    },
+    {
+      "date": "2026-08-20",
+      "tvl": 5226107459
+    },
+    {
+      "date": "2026-08-21",
+      "tvl": 5332104911
+    },
+    {
+      "date": "2026-08-22",
+      "tvl": 5551902342
+    },
+    {
+      "date": "2026-08-23",
+      "tvl": 5557657858
+    },
+    {
+      "date": "2026-08-24",
+      "tvl": 5561528475
+    },
+    {
+      "date": "2026-08-25",
+      "tvl": 5737289299
+    },
+    {
+      "date": "2026-08-26",
+      "tvl": 5606490789
+    },
+    {
+      "date": "2026-08-27",
+      "tvl": 5773839594
+    },
+    {
+      "date": "2026-08-28",
+      "tvl": 6012977669
+    },
+    {
+      "date": "2026-08-29",
+      "tvl": 5869608059
+    },
+    {
+      "date": "2026-08-30",
+      "tvl": 5911045764
+    },
+    {
+      "date": "2026-08-31",
+      "tvl": 5961008091
+    },
+    {
+      "date": "2026-09-01",
+      "tvl": 5962558370
+    }
+  ],
+  "validators": [
+    {
+      "identity": "Fd7btgySsrjuo25CJCj7oE7VPMyezDhnx7pZkj2v69Nk",
+      "votePubkey": "CcaHc2L43ZWjwCHART3oZoJvHLAe9hzT2DJNUpBzoTN1",
+      "activatedStake": 17174436.211090993,
+      "commission": 7,
+      "status": "healthy"
+    },
+    {
+      "identity": "HEL1USMZKAL2odpNBj2oCjffnFGaYwmbGmyewGv1e2TU",
+      "votePubkey": "he1iusunGwqrNtafDtLdhsUQDFvo13z9sUa36PauBtk",
+      "activatedStake": 16281426.295062715,
+      "commission": 0,
+      "status": "healthy"
+    },
+    {
+      "identity": "DRpbCBMxVnDK7maPM5tGv6MvB3v1sRMC86PZ8okm21hy",
+      "votePubkey": "3N7s9zXMZ4QqvHQR15t5GNHyqc89KduzMP7423eWiD5g",
+      "activatedStake": 12434729.8192635,
+      "commission": 0,
+      "status": "healthy"
+    },
+    {
+      "identity": "JUPiTERrZqgf1jUyR7dSkhMx4Kn2qJyekWsg3LT1h4b",
+      "votePubkey": "CatzoSMUkTRidT5DwBxAC2pEtnwMBTpkCepHkFgZDiqb",
+      "activatedStake": 11480709.316984456,
+      "commission": 5,
+      "status": "healthy"
+    },
+    {
+      "identity": "E1r4Psq84tHfQ6aPTvvDka4U3u8zPVD7gEUrH25RdxHL",
+      "votePubkey": "8GbwASqdpw4dVcwbWUxbHXMrjyQx2aKkoBR5H1GJF8iD",
+      "activatedStake": 9455250.399651764,
+      "commission": 0,
+      "status": "healthy"
+    },
+    {
+      "identity": "C8Bey3LKVJHVqN6xPTeW8WJfUgFQAeGNBpT4Rp99JP1k",
+      "votePubkey": "26pV97Ce83ZQ6Kz9XT4td8tdoUFPTng8Fb8gPyc53dJx",
+      "activatedStake": 9285505.59636794,
+      "commission": 7,
+      "status": "healthy"
+    },
+    {
+      "identity": "CAo1dCGYrB6NhHh5xb1cGjUiu86iyCfMTENxgHumSve4",
+      "votePubkey": "51JBzSTU5rAM8gLAVQKgp4WoZerQcSqWC7BitBzgUNAm",
+      "activatedStake": 9044015.82090675,
+      "commission": 10,
+      "status": "healthy"
+    }
+  ],
+  "signals": [
+    {
+      "severity": "info",
+      "title": "Validator participation healthy",
+      "detail": "Delinquency is 1.9%, below the 5% watch threshold."
+    }
+  ],
+  "releases": [
+    {
+      "title": "Release v4.4.0-alpha.2",
+      "tag": "v4.4.0-alpha.2",
+      "publishedAt": "2026-08-28T06:07:28Z",
+      "url": "https://github.com/anza-xyz/agave/releases/tag/v4.4.0-alpha.2"
+    },
+    {
+      "title": "Release v4.3.0-beta.3",
+      "tag": "v4.3.0-beta.3",
+      "publishedAt": "2026-08-28T18:53:56Z",
+      "url": "https://github.com/anza-xyz/agave/releases/tag/v4.3.0-beta.3"
+    },
+    {
+      "title": "Release v4.2.2",
+      "tag": "v4.2.2",
+      "publishedAt": "2026-08-28T18:47:41Z",
+      "url": "https://github.com/anza-xyz/agave/releases/tag/v4.2.2"
+    },
+    {
+      "title": "Release v4.3.0-beta.2",
+      "tag": "v4.3.0-beta.2",
+      "publishedAt": "2026-08-21T14:34:51Z",
+      "url": "https://github.com/anza-xyz/agave/releases/tag/v4.3.0-beta.2"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Solana RPC",
+      "url": "https://solana-rpc.publicnode.com",
+      "cadence": "60 sec",
+      "state": "live"
+    },
+    {
+      "name": "DefiLlama",
+      "url": "https://defillama.com/chain/Solana",
+      "cadence": "5 min",
+      "state": "live"
+    },
+    {
+      "name": "CoinGecko",
+      "url": "https://www.coingecko.com/en/coins/solana",
+      "cadence": "5 min",
+      "state": "live"
+    },
+    {
+      "name": "Agave releases",
+      "url": "https://github.com/anza-xyz/agave/releases",
+      "cadence": "1 hour",
+      "state": "live"
+    }
+  ]
+}
