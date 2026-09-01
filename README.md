@@ -51,7 +51,7 @@ This creates reports/latest.json and reports/latest.md.
 - Vinext and React power the dashboard.
 - The server-side snapshot route queries public, keyless data sources in parallel.
 - Each upstream request has a timeout; unavailable sources degrade to a partial or sample state.
-- Recharts and shadcn components provide responsive, accessible visualizations and controls.
+- Lightweight SVG trend charts and shadcn components provide responsive, accessible visualizations and controls.
 - Browser auto-refresh is selectable: off, 30 seconds, 60 seconds, or 5 minutes.
 
 ## Limitations

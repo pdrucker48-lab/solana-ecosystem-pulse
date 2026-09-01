@@ -20,16 +20,6 @@ import {
   UsersRound,
   WalletCards,
 } from 'lucide-react';
-import {
-  Area,
-  AreaChart,
-  CartesianGrid,
-  Line,
-  LineChart,
-  XAxis,
-  YAxis,
-} from 'recharts';
-
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
@@ -39,12 +29,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import {
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-  type ChartConfig,
-} from '@/components/ui/chart';
 import { NativeSelect, NativeSelectOption } from '@/components/ui/native-select';
 import { Progress } from '@/components/ui/progress';
 import {
@@ -68,15 +52,6 @@ const compact = new Intl.NumberFormat('en-US', {
   maximumFractionDigits: 2,
 });
 const integer = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 });
-
-const throughputConfig = {
-  tps: { label: 'Transactions/sec', color: '#14f195' },
-  slotTimeMs: { label: 'Slot time (ms)', color: '#9945ff' },
-} satisfies ChartConfig;
-
-const tvlConfig = {
-  tvl: { label: 'DeFi TVL', color: '#9945ff' },
-} satisfies ChartConfig;
 
 function pct(value: number) {
   return `${value >= 0 ? '+' : ''}${value.toFixed(1)}%`;
@@ -112,6 +87,82 @@ function signalStyle(severity: SignalSeverity) {
   if (severity === 'critical') return 'border-red-400/18 bg-red-400/[0.055] text-red-200';
   if (severity === 'watch') return 'border-amber-300/16 bg-amber-300/[0.045] text-amber-200';
   return 'border-cyan-300/14 bg-cyan-300/[0.04] text-cyan-200';
+}
+
+interface TrendChartProps {
+  ariaLabel: string;
+  labels: string[];
+  primary: number[];
+  primaryColor: string;
+  primaryLabel: string;
+  primaryValue: (value: number) => string;
+  secondary?: number[];
+  secondaryColor?: string;
+  secondaryLabel?: string;
+  shaded?: boolean;
+}
+
+function chartPoints(values: number[], width: number, height: number, padding: number) {
+  const minimum = Math.min(...values);
+  const maximum = Math.max(...values);
+  const span = maximum - minimum || 1;
+  return values.map((value, index) => {
+    const x = padding + (index / Math.max(1, values.length - 1)) * (width - padding * 2);
+    const y = padding + (1 - (value - minimum) / span) * (height - padding * 2);
+    return { x, y };
+  });
+}
+
+function TrendChart({
+  ariaLabel,
+  labels,
+  primary,
+  primaryColor,
+  primaryLabel,
+  primaryValue,
+  secondary,
+  secondaryColor = '#9945ff',
+  secondaryLabel,
+  shaded = false,
+}: TrendChartProps) {
+  const width = 800;
+  const height = 240;
+  const padding = 26;
+  const primaryPoints = chartPoints(primary, width, height, padding);
+  const secondaryPoints = secondary ? chartPoints(secondary, width, height, padding) : [];
+  const line = (points: Array<{ x: number; y: number }>) => points.map(({ x, y }) => `${x},${y}`).join(' ');
+  const area = `${padding},${height - padding} ${line(primaryPoints)} ${width - padding},${height - padding}`;
+  const midpoint = Math.floor((labels.length - 1) / 2);
+
+  return (
+    <figure className="h-64 w-full">
+      <figcaption className="sr-only">{ariaLabel}</figcaption>
+      <svg viewBox={`0 0 ${width} ${height}`} className="h-[220px] w-full overflow-visible" aria-hidden="true">
+        <defs>
+          <linearGradient id="solPulseChartFill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor={primaryColor} stopOpacity="0.32" />
+            <stop offset="100%" stopColor={primaryColor} stopOpacity="0.015" />
+          </linearGradient>
+        </defs>
+        {[0.2, 0.4, 0.6, 0.8].map((position) => (
+          <line key={position} x1={padding} x2={width - padding} y1={height * position} y2={height * position} stroke="rgba(255,255,255,.07)" strokeWidth="1" />
+        ))}
+        {shaded && <polygon points={area} fill="url(#solPulseChartFill)" />}
+        <polyline points={line(primaryPoints)} fill="none" stroke={primaryColor} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" vectorEffect="non-scaling-stroke" />
+        {secondaryPoints.length > 0 && (
+          <polyline points={line(secondaryPoints)} fill="none" stroke={secondaryColor} strokeWidth="1.75" strokeDasharray="5 6" strokeLinecap="round" strokeLinejoin="round" vectorEffect="non-scaling-stroke" />
+        )}
+        {primaryPoints.at(-1) && <circle cx={primaryPoints.at(-1)?.x} cy={primaryPoints.at(-1)?.y} r="4" fill={primaryColor} />}
+        <text x={padding} y={height - 5} fill="rgba(255,255,255,.36)" fontSize="11">{labels[0]}</text>
+        <text x={width / 2} y={height - 5} fill="rgba(255,255,255,.36)" fontSize="11" textAnchor="middle">{labels[midpoint]}</text>
+        <text x={width - padding} y={height - 5} fill="rgba(255,255,255,.36)" fontSize="11" textAnchor="end">{labels.at(-1)}</text>
+      </svg>
+      <div className="flex items-center justify-between gap-4 font-mono text-[10px] text-zinc-500">
+        <span className="flex items-center gap-1.5"><span className="size-2 rounded-full" style={{ background: primaryColor }} />{primaryLabel}: {primaryValue(primary.at(-1) ?? 0)}</span>
+        {secondary && secondaryLabel && <span className="flex items-center gap-1.5"><span className="size-2 rounded-full" style={{ background: secondaryColor }} />{secondaryLabel}: {integer.format(secondary.at(-1) ?? 0)} ms</span>}
+      </div>
+    </figure>
+  );
 }
 
 interface DashboardProps {
@@ -320,17 +371,16 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
               </div>
             </CardHeader>
             <CardContent>
-              <ChartContainer config={throughputConfig} className="h-64 w-full aspect-auto" initialDimension={{ width: 760, height: 256 }}>
-                <LineChart data={snapshot.performance} margin={{ left: -18, right: 8, top: 14, bottom: 0 }}>
-                  <CartesianGrid vertical={false} stroke="rgba(255,255,255,.07)" />
-                  <XAxis dataKey="label" tickLine={false} axisLine={false} minTickGap={24} />
-                  <YAxis yAxisId="tps" tickLine={false} axisLine={false} width={58} tickFormatter={(value) => compact.format(value)} />
-                  <YAxis yAxisId="slot" orientation="right" hide domain={['dataMin - 5', 'dataMax + 5']} />
-                  <ChartTooltip content={<ChartTooltipContent indicator="line" />} />
-                  <Line yAxisId="tps" type="monotone" dataKey="tps" stroke="var(--color-tps)" strokeWidth={2.5} dot={false} activeDot={{ r: 4 }} />
-                  <Line yAxisId="slot" type="monotone" dataKey="slotTimeMs" stroke="var(--color-slotTimeMs)" strokeWidth={1.5} strokeDasharray="4 5" dot={false} />
-                </LineChart>
-              </ChartContainer>
+              <TrendChart
+                ariaLabel="Recent Solana transaction throughput and slot time"
+                labels={snapshot.performance.map((point) => point.label)}
+                primary={snapshot.performance.map((point) => point.tps)}
+                primaryColor="#14f195"
+                primaryLabel="Transactions/sec"
+                primaryValue={(value) => integer.format(value)}
+                secondary={snapshot.performance.map((point) => point.slotTimeMs)}
+                secondaryLabel="Slot time"
+              />
             </CardContent>
           </Card>
 
@@ -375,16 +425,15 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
               </div>
             </CardHeader>
             <CardContent>
-              <ChartContainer config={tvlConfig} className="h-64 w-full aspect-auto" initialDimension={{ width: 820, height: 256 }}>
-                <AreaChart data={tvlData} margin={{ left: -10, right: 8, top: 14, bottom: 0 }}>
-                  <defs><linearGradient id="tvlGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#9945ff" stopOpacity={0.38} /><stop offset="100%" stopColor="#9945ff" stopOpacity={0.015} /></linearGradient></defs>
-                  <CartesianGrid vertical={false} stroke="rgba(255,255,255,.07)" />
-                  <XAxis dataKey="date" tickLine={false} axisLine={false} minTickGap={30} tickFormatter={(value) => new Date(`${value}T00:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })} />
-                  <YAxis tickLine={false} axisLine={false} width={64} tickFormatter={(value) => `$${compact.format(value)}`} domain={['dataMin - 50000000', 'dataMax + 50000000']} />
-                  <ChartTooltip content={<ChartTooltipContent indicator="line" formatter={(value) => <span className="ml-auto font-mono font-medium text-white">${compact.format(Number(value))}</span>} />} />
-                  <Area type="monotone" dataKey="tvl" stroke="var(--color-tvl)" strokeWidth={2.5} fill="url(#tvlGradient)" />
-                </AreaChart>
-              </ChartContainer>
+              <TrendChart
+                ariaLabel={`Solana DeFi total value locked over ${range} days`}
+                labels={tvlData.map((point) => new Date(`${point.date}T00:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' }))}
+                primary={tvlData.map((point) => point.tvl)}
+                primaryColor="#9945ff"
+                primaryLabel="DeFi TVL"
+                primaryValue={(value) => `$${compact.format(value)}`}
+                shaded
+              />
             </CardContent>
           </Card>
 
