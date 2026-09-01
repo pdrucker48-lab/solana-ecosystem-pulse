@@ -29,7 +29,10 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { NativeSelect, NativeSelectOption } from '@/components/ui/native-select';
+import {
+  NativeSelect,
+  NativeSelectOption,
+} from '@/components/ui/native-select';
 import { Progress } from '@/components/ui/progress';
 import {
   Table,
@@ -84,8 +87,10 @@ function downloadFile(filename: string, content: string, type: string) {
 }
 
 function signalStyle(severity: SignalSeverity) {
-  if (severity === 'critical') return 'border-red-400/18 bg-red-400/[0.055] text-red-200';
-  if (severity === 'watch') return 'border-amber-300/16 bg-amber-300/[0.045] text-amber-200';
+  if (severity === 'critical')
+    return 'border-red-400/18 bg-red-400/[0.055] text-red-200';
+  if (severity === 'watch')
+    return 'border-amber-300/16 bg-amber-300/[0.045] text-amber-200';
   return 'border-cyan-300/14 bg-cyan-300/[0.04] text-cyan-200';
 }
 
@@ -102,12 +107,19 @@ interface TrendChartProps {
   shaded?: boolean;
 }
 
-function chartPoints(values: number[], width: number, height: number, padding: number) {
+function chartPoints(
+  values: number[],
+  width: number,
+  height: number,
+  padding: number,
+) {
   const minimum = Math.min(...values);
   const maximum = Math.max(...values);
   const span = maximum - minimum || 1;
   return values.map((value, index) => {
-    const x = padding + (index / Math.max(1, values.length - 1)) * (width - padding * 2);
+    const x =
+      padding +
+      (index / Math.max(1, values.length - 1)) * (width - padding * 2);
     const y = padding + (1 - (value - minimum) / span) * (height - padding * 2);
     return { x, y };
   });
@@ -129,15 +141,22 @@ function TrendChart({
   const height = 240;
   const padding = 26;
   const primaryPoints = chartPoints(primary, width, height, padding);
-  const secondaryPoints = secondary ? chartPoints(secondary, width, height, padding) : [];
-  const line = (points: Array<{ x: number; y: number }>) => points.map(({ x, y }) => `${x},${y}`).join(' ');
+  const secondaryPoints = secondary
+    ? chartPoints(secondary, width, height, padding)
+    : [];
+  const line = (points: Array<{ x: number; y: number }>) =>
+    points.map(({ x, y }) => `${x},${y}`).join(' ');
   const area = `${padding},${height - padding} ${line(primaryPoints)} ${width - padding},${height - padding}`;
   const midpoint = Math.floor((labels.length - 1) / 2);
 
   return (
     <figure className="h-64 w-full">
       <figcaption className="sr-only">{ariaLabel}</figcaption>
-      <svg viewBox={`0 0 ${width} ${height}`} className="h-[220px] w-full overflow-visible" aria-hidden="true">
+      <svg
+        viewBox={`0 0 ${width} ${height}`}
+        className="h-[220px] w-full overflow-visible"
+        aria-hidden="true"
+      >
         <defs>
           <linearGradient id="solPulseChartFill" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stopColor={primaryColor} stopOpacity="0.32" />
@@ -145,21 +164,90 @@ function TrendChart({
           </linearGradient>
         </defs>
         {[0.2, 0.4, 0.6, 0.8].map((position) => (
-          <line key={position} x1={padding} x2={width - padding} y1={height * position} y2={height * position} stroke="rgba(255,255,255,.07)" strokeWidth="1" />
+          <line
+            key={position}
+            x1={padding}
+            x2={width - padding}
+            y1={height * position}
+            y2={height * position}
+            stroke="rgba(255,255,255,.07)"
+            strokeWidth="1"
+          />
         ))}
         {shaded && <polygon points={area} fill="url(#solPulseChartFill)" />}
-        <polyline points={line(primaryPoints)} fill="none" stroke={primaryColor} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" vectorEffect="non-scaling-stroke" />
+        <polyline
+          points={line(primaryPoints)}
+          fill="none"
+          stroke={primaryColor}
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          vectorEffect="non-scaling-stroke"
+        />
         {secondaryPoints.length > 0 && (
-          <polyline points={line(secondaryPoints)} fill="none" stroke={secondaryColor} strokeWidth="1.75" strokeDasharray="5 6" strokeLinecap="round" strokeLinejoin="round" vectorEffect="non-scaling-stroke" />
+          <polyline
+            points={line(secondaryPoints)}
+            fill="none"
+            stroke={secondaryColor}
+            strokeWidth="1.75"
+            strokeDasharray="5 6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            vectorEffect="non-scaling-stroke"
+          />
         )}
-        {primaryPoints.at(-1) && <circle cx={primaryPoints.at(-1)?.x} cy={primaryPoints.at(-1)?.y} r="4" fill={primaryColor} />}
-        <text x={padding} y={height - 5} fill="rgba(255,255,255,.36)" fontSize="11">{labels[0]}</text>
-        <text x={width / 2} y={height - 5} fill="rgba(255,255,255,.36)" fontSize="11" textAnchor="middle">{labels[midpoint]}</text>
-        <text x={width - padding} y={height - 5} fill="rgba(255,255,255,.36)" fontSize="11" textAnchor="end">{labels.at(-1)}</text>
+        {primaryPoints.at(-1) && (
+          <circle
+            cx={primaryPoints.at(-1)?.x}
+            cy={primaryPoints.at(-1)?.y}
+            r="4"
+            fill={primaryColor}
+          />
+        )}
+        <text
+          x={padding}
+          y={height - 5}
+          fill="rgba(255,255,255,.36)"
+          fontSize="11"
+        >
+          {labels[0]}
+        </text>
+        <text
+          x={width / 2}
+          y={height - 5}
+          fill="rgba(255,255,255,.36)"
+          fontSize="11"
+          textAnchor="middle"
+        >
+          {labels[midpoint]}
+        </text>
+        <text
+          x={width - padding}
+          y={height - 5}
+          fill="rgba(255,255,255,.36)"
+          fontSize="11"
+          textAnchor="end"
+        >
+          {labels.at(-1)}
+        </text>
       </svg>
       <div className="flex items-center justify-between gap-4 font-mono text-[10px] text-zinc-500">
-        <span className="flex items-center gap-1.5"><span className="size-2 rounded-full" style={{ background: primaryColor }} />{primaryLabel}: {primaryValue(primary.at(-1) ?? 0)}</span>
-        {secondary && secondaryLabel && <span className="flex items-center gap-1.5"><span className="size-2 rounded-full" style={{ background: secondaryColor }} />{secondaryLabel}: {integer.format(secondary.at(-1) ?? 0)} ms</span>}
+        <span className="flex items-center gap-1.5">
+          <span
+            className="size-2 rounded-full"
+            style={{ background: primaryColor }}
+          />
+          {primaryLabel}: {primaryValue(primary.at(-1) ?? 0)}
+        </span>
+        {secondary && secondaryLabel && (
+          <span className="flex items-center gap-1.5">
+            <span
+              className="size-2 rounded-full"
+              style={{ background: secondaryColor }}
+            />
+            {secondaryLabel}: {integer.format(secondary.at(-1) ?? 0)} ms
+          </span>
+        )}
       </div>
     </figure>
   );
@@ -180,11 +268,16 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
     setRefreshing(true);
     try {
       const response = await fetch('/api/snapshot', { cache: 'no-store' });
-      if (!response.ok) throw new Error(`Snapshot request failed (${response.status})`);
+      if (!response.ok)
+        throw new Error(`Snapshot request failed (${response.status})`);
       setSnapshot((await response.json()) as EcosystemSnapshot);
       setError(null);
     } catch (requestError) {
-      setError(requestError instanceof Error ? requestError.message : 'Live refresh failed');
+      setError(
+        requestError instanceof Error
+          ? requestError.message
+          : 'Live refresh failed',
+      );
     } finally {
       setRefreshing(false);
     }
@@ -197,21 +290,33 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
 
   useEffect(() => {
     if (!autoRefresh) return;
-    const interval = window.setInterval(() => void refresh(), autoRefresh * 1000);
+    const interval = window.setInterval(
+      () => void refresh(),
+      autoRefresh * 1000,
+    );
     return () => window.clearInterval(interval);
   }, [autoRefresh, refresh]);
 
-  const tvlData = useMemo(() => snapshot.tvlHistory.slice(-(range + 1)), [range, snapshot.tvlHistory]);
+  const tvlData = useMemo(
+    () => snapshot.tvlHistory.slice(-(range + 1)),
+    [range, snapshot.tvlHistory],
+  );
   const tvlChange =
     range === 1
       ? snapshot.economy.tvlChange1d
       : range === 7
         ? snapshot.economy.tvlChange7d
         : snapshot.economy.tvlChange30d;
-  const latestPerformance = snapshot.performance.at(-1)?.tps ?? snapshot.network.tps;
-  const previousPerformance = snapshot.performance.at(-2)?.tps ?? latestPerformance;
-  const tpsChange = previousPerformance ? ((latestPerformance - previousPerformance) / previousPerformance) * 100 : 0;
-  const liveSources = snapshot.sources.filter((source) => source.state === 'live').length;
+  const latestPerformance =
+    snapshot.performance.at(-1)?.tps ?? snapshot.network.tps;
+  const previousPerformance =
+    snapshot.performance.at(-2)?.tps ?? latestPerformance;
+  const tpsChange = previousPerformance
+    ? ((latestPerformance - previousPerformance) / previousPerformance) * 100
+    : 0;
+  const liveSources = snapshot.sources.filter(
+    (source) => source.state === 'live',
+  ).length;
   const generated = new Date(snapshot.generatedAt);
 
   const exportJson = () =>
@@ -263,18 +368,32 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
       <header className="sticky top-0 z-20 border-b border-white/8 bg-background/88 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-4 px-4 py-3.5 sm:px-5 lg:px-8">
           <div className="flex items-center gap-3">
-            <div className="pulse-mark" aria-hidden="true"><span /><span /><span /></div>
+            <div className="pulse-mark" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </div>
             <div>
-              <p className="font-mono text-sm font-semibold tracking-[0.18em] text-white">SOL//PULSE</p>
-              <p className="hidden text-xs text-muted-foreground sm:block">Ecosystem intelligence</p>
+              <p className="font-mono text-sm font-semibold tracking-[0.18em] text-white">
+                SOL//PULSE
+              </p>
+              <p className="hidden text-xs text-muted-foreground sm:block">
+                Ecosystem intelligence
+              </p>
             </div>
           </div>
 
           <div className="hidden items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/7 px-3 py-1.5 text-xs text-emerald-300 md:flex">
             <Radio className="size-3.5" />
-            <span>{snapshot.state === 'live' ? 'Live network feed' : `${snapshot.state} data`}</span>
+            <span>
+              {snapshot.state === 'live'
+                ? 'Live network feed'
+                : `${snapshot.state} data`}
+            </span>
             <span className="mx-1 h-3 w-px bg-emerald-300/20" />
-            <span className="font-mono text-emerald-100/70">{generated.toISOString().slice(11, 19)} UTC</span>
+            <span className="font-mono text-emerald-100/70">
+              {generated.toISOString().slice(11, 19)} UTC
+            </span>
           </div>
 
           <div className="flex items-center gap-2">
@@ -287,8 +406,12 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
             >
               <NativeSelectOption value="0">Manual</NativeSelectOption>
               <NativeSelectOption value="60">Every minute</NativeSelectOption>
-              <NativeSelectOption value="300">Every 5 minutes</NativeSelectOption>
-              <NativeSelectOption value="900">Every 15 minutes</NativeSelectOption>
+              <NativeSelectOption value="300">
+                Every 5 minutes
+              </NativeSelectOption>
+              <NativeSelectOption value="900">
+                Every 15 minutes
+              </NativeSelectOption>
             </NativeSelect>
             <Button
               aria-label="Refresh live data"
@@ -300,7 +423,10 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
             >
               <RefreshCw className={refreshing ? 'animate-spin' : ''} />
             </Button>
-            <Button className="hidden bg-white text-zinc-950 hover:bg-zinc-200 sm:inline-flex" onClick={exportMarkdown}>
+            <Button
+              className="hidden bg-white text-zinc-950 hover:bg-zinc-200 sm:inline-flex"
+              onClick={exportMarkdown}
+            >
               <Download data-icon="inline-start" /> Export report
             </Button>
           </div>
@@ -310,25 +436,43 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
       <div className="mx-auto max-w-[1500px] px-4 py-6 sm:px-5 lg:px-8">
         {(error || snapshot.state !== 'live') && (
           <div className="mb-4 flex items-center justify-between gap-3 rounded-lg border border-amber-300/14 bg-amber-300/[0.04] px-3 py-2 text-xs text-amber-100/70">
-            <span>{error ? `Live refresh issue: ${error}. Showing the latest available values.` : `Data state: ${snapshot.state}. ${liveSources}/${snapshot.sources.length} sources are live.`}</span>
-            <button type="button" className="shrink-0 font-medium text-amber-200 hover:text-white" onClick={() => void refresh()}>Retry</button>
+            <span>
+              {error
+                ? `Live refresh issue: ${error}. Showing the latest available values.`
+                : `Data state: ${snapshot.state}. ${liveSources}/${snapshot.sources.length} sources are live.`}
+            </span>
+            <button
+              type="button"
+              className="shrink-0 font-medium text-amber-200 hover:text-white"
+              onClick={() => void refresh()}
+            >
+              Retry
+            </button>
           </div>
         )}
 
         <section className="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
-            <div className="mb-2 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-violet-300"><Sparkles className="size-3.5" /> Network briefing</div>
-            <h1 className="max-w-4xl text-3xl font-semibold tracking-[-0.035em] text-white md:text-4xl">{snapshot.briefing}</h1>
+            <div className="mb-2 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-violet-300">
+              <Sparkles className="size-3.5" /> Network briefing
+            </div>
+            <h1 className="max-w-4xl text-3xl font-semibold tracking-[-0.035em] text-white md:text-4xl">
+              {snapshot.briefing}
+            </h1>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">
-              Keyless, automatically refreshed monitoring across Solana RPC, DefiLlama, CoinGecko, and Agave releases.
+              Keyless, automatically refreshed multi-source monitoring with
+              provider-consensus activity metrics and official protocol-roadmap
+              tracking.
             </p>
           </div>
           <div className="flex items-center gap-1 self-start rounded-lg border border-white/8 bg-white/[0.025] p-1 md:self-auto">
-            {([
-              [1, '24H'],
-              [7, '7D'],
-              [30, '30D'],
-            ] as const).map(([days, label]) => (
+            {(
+              [
+                [1, '24H'],
+                [7, '7D'],
+                [30, '30D'],
+              ] as const
+            ).map(([days, label]) => (
               <button
                 key={days}
                 className={`rounded-md px-3 py-1.5 font-mono text-xs transition ${range === days ? 'bg-white text-zinc-950' : 'text-zinc-500 hover:text-zinc-200'}`}
@@ -346,15 +490,29 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
             const Icon = metric.icon;
             const Direction = metric.positive ? ArrowUpRight : ArrowDownRight;
             return (
-              <Card key={metric.label} className="metric-card border-0 bg-card py-4 ring-white/8">
+              <Card
+                key={metric.label}
+                className="metric-card border-0 bg-card py-4 ring-white/8"
+              >
                 <CardContent className="px-4">
                   <div className="mb-5 flex items-center justify-between">
-                    <span className="text-xs font-medium text-muted-foreground">{metric.label}</span>
-                    <span className="rounded-md border border-white/8 bg-white/[0.035] p-1.5 text-zinc-400"><Icon className="size-4" /></span>
+                    <span className="text-xs font-medium text-muted-foreground">
+                      {metric.label}
+                    </span>
+                    <span className="rounded-md border border-white/8 bg-white/[0.035] p-1.5 text-zinc-400">
+                      <Icon className="size-4" />
+                    </span>
                   </div>
                   <div className="flex items-end justify-between gap-3">
-                    <strong className="font-mono text-2xl font-semibold tracking-tight text-white">{metric.value}</strong>
-                    <span className={`flex items-center gap-0.5 text-right font-mono text-[11px] ${metric.positive ? 'text-emerald-300' : 'text-rose-300'}`}><Direction className="size-3.5" />{metric.change}</span>
+                    <strong className="font-mono text-2xl font-semibold tracking-tight text-white">
+                      {metric.value}
+                    </strong>
+                    <span
+                      className={`flex items-center gap-0.5 text-right font-mono text-[11px] ${metric.positive ? 'text-emerald-300' : 'text-rose-300'}`}
+                    >
+                      <Direction className="size-3.5" />
+                      {metric.change}
+                    </span>
                   </div>
                 </CardContent>
               </Card>
@@ -366,8 +524,21 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
           <Card className="border-0 bg-card ring-white/8">
             <CardHeader className="border-b border-white/7 pb-4">
               <div className="flex items-start justify-between">
-                <div><CardTitle className="text-base text-white">Network throughput</CardTitle><CardDescription>Transactions and slot cadence from recent RPC samples</CardDescription></div>
-                <Badge variant="outline" className="border-emerald-400/20 bg-emerald-400/7 text-emerald-300">{integer.format(snapshot.network.tps)} TPS</Badge>
+                <div>
+                  <CardTitle className="text-base text-white">
+                    Network throughput
+                  </CardTitle>
+                  <CardDescription>
+                    Total and non-vote transactions with slot cadence from
+                    recent RPC samples
+                  </CardDescription>
+                </div>
+                <Badge
+                  variant="outline"
+                  className="border-emerald-400/20 bg-emerald-400/7 text-emerald-300"
+                >
+                  {integer.format(snapshot.network.tps)} TPS
+                </Badge>
               </div>
             </CardHeader>
             <CardContent>
@@ -376,9 +547,11 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
                 labels={snapshot.performance.map((point) => point.label)}
                 primary={snapshot.performance.map((point) => point.tps)}
                 primaryColor="#14f195"
-                primaryLabel="Transactions/sec"
+                primaryLabel={`Total TPS · non-vote ${integer.format(snapshot.performance.at(-1)?.nonVoteTps ?? 0)}`}
                 primaryValue={(value) => integer.format(value)}
-                secondary={snapshot.performance.map((point) => point.slotTimeMs)}
+                secondary={snapshot.performance.map(
+                  (point) => point.slotTimeMs,
+                )}
                 secondaryLabel="Slot time"
               />
             </CardContent>
@@ -387,28 +560,67 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
             <Card className="border-0 bg-card ring-white/8">
               <CardHeader className="border-b border-white/7 pb-4">
-                <CardTitle className="flex items-center gap-2 text-base text-white"><CircleGauge className="size-4 text-violet-300" /> Epoch {snapshot.network.epoch}</CardTitle>
-                <CardDescription>Estimated completion in {formatEta(snapshot.network.epochEtaSeconds)}</CardDescription>
+                <CardTitle className="flex items-center gap-2 text-base text-white">
+                  <CircleGauge className="size-4 text-violet-300" /> Epoch{' '}
+                  {snapshot.network.epoch}
+                </CardTitle>
+                <CardDescription>
+                  Estimated completion in{' '}
+                  {formatEta(snapshot.network.epochEtaSeconds)}
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-5">
                 <div>
-                  <div className="mb-2 flex justify-between font-mono text-xs"><span className="text-zinc-500">Progress</span><span className="text-white">{snapshot.network.epochProgress.toFixed(1)}%</span></div>
-                  <Progress value={snapshot.network.epochProgress} className="[&_[data-slot=progress-indicator]]:bg-gradient-to-r [&_[data-slot=progress-indicator]]:from-violet-500 [&_[data-slot=progress-indicator]]:to-emerald-400 [&_[data-slot=progress-track]]:h-2 [&_[data-slot=progress-track]]:bg-white/6" />
+                  <div className="mb-2 flex justify-between font-mono text-xs">
+                    <span className="text-zinc-500">Progress</span>
+                    <span className="text-white">
+                      {snapshot.network.epochProgress.toFixed(1)}%
+                    </span>
+                  </div>
+                  <Progress
+                    value={snapshot.network.epochProgress}
+                    className="[&_[data-slot=progress-indicator]]:bg-gradient-to-r [&_[data-slot=progress-indicator]]:from-violet-500 [&_[data-slot=progress-indicator]]:to-emerald-400 [&_[data-slot=progress-track]]:h-2 [&_[data-slot=progress-track]]:bg-white/6"
+                  />
                 </div>
                 <div className="grid grid-cols-2 gap-2">
-                  <div className="rounded-lg border border-white/7 bg-white/[0.025] p-3"><p className="text-xs text-zinc-500">Block height</p><p className="mt-1 font-mono text-lg text-white">{compact.format(snapshot.network.blockHeight)}</p></div>
-                  <div className="rounded-lg border border-white/7 bg-white/[0.025] p-3"><p className="text-xs text-zinc-500">SOL supply</p><p className="mt-1 font-mono text-lg text-white">{compact.format(snapshot.network.supplySol)}</p></div>
+                  <div className="rounded-lg border border-white/7 bg-white/[0.025] p-3">
+                    <p className="text-xs text-zinc-500">Block height</p>
+                    <p className="mt-1 font-mono text-lg text-white">
+                      {compact.format(snapshot.network.blockHeight)}
+                    </p>
+                  </div>
+                  <div className="rounded-lg border border-white/7 bg-white/[0.025] p-3">
+                    <p className="text-xs text-zinc-500">SOL supply</p>
+                    <p className="mt-1 font-mono text-lg text-white">
+                      {compact.format(snapshot.network.supplySol)}
+                    </p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
 
             <Card className="border-0 bg-card ring-white/8">
-              <CardHeader className="pb-2"><CardTitle className="flex items-center gap-2 text-base text-white"><ShieldAlert className="size-4 text-amber-300" /> Signal desk</CardTitle><CardDescription>Rule-based anomaly checks</CardDescription></CardHeader>
+              <CardHeader className="pb-2">
+                <CardTitle className="flex items-center gap-2 text-base text-white">
+                  <ShieldAlert className="size-4 text-amber-300" /> Signal desk
+                </CardTitle>
+                <CardDescription>Rule-based anomaly checks</CardDescription>
+              </CardHeader>
               <CardContent className="space-y-2">
                 {snapshot.signals.slice(0, 3).map((signal) => (
-                  <div key={signal.title} className={`rounded-lg border p-3 ${signalStyle(signal.severity)}`}>
-                    <div className="flex items-center justify-between gap-2"><p className="text-sm font-medium">{signal.title}</p><span className="font-mono text-[9px] uppercase tracking-wider opacity-70">{signal.severity}</span></div>
-                    <p className="mt-1 text-xs leading-5 opacity-60">{signal.detail}</p>
+                  <div
+                    key={signal.title}
+                    className={`rounded-lg border p-3 ${signalStyle(signal.severity)}`}
+                  >
+                    <div className="flex items-center justify-between gap-2">
+                      <p className="text-sm font-medium">{signal.title}</p>
+                      <span className="font-mono text-[9px] uppercase tracking-wider opacity-70">
+                        {signal.severity}
+                      </span>
+                    </div>
+                    <p className="mt-1 text-xs leading-5 opacity-60">
+                      {signal.detail}
+                    </p>
                   </div>
                 ))}
               </CardContent>
@@ -420,14 +632,31 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
           <Card className="border-0 bg-card ring-white/8">
             <CardHeader className="border-b border-white/7 pb-4">
               <div className="flex items-start justify-between gap-3">
-                <div><CardTitle className="flex items-center gap-2 text-base text-white"><TrendingUp className="size-4 text-violet-300" /> Ecosystem liquidity</CardTitle><CardDescription>Solana DeFi TVL over the selected range</CardDescription></div>
-                <span className={`font-mono text-xs ${tvlChange >= 0 ? 'text-emerald-300' : 'text-rose-300'}`}>{pct(tvlChange)}</span>
+                <div>
+                  <CardTitle className="flex items-center gap-2 text-base text-white">
+                    <TrendingUp className="size-4 text-violet-300" /> Ecosystem
+                    liquidity
+                  </CardTitle>
+                  <CardDescription>
+                    Solana DeFi TVL over the selected range
+                  </CardDescription>
+                </div>
+                <span
+                  className={`font-mono text-xs ${tvlChange >= 0 ? 'text-emerald-300' : 'text-rose-300'}`}
+                >
+                  {pct(tvlChange)}
+                </span>
               </div>
             </CardHeader>
             <CardContent>
               <TrendChart
                 ariaLabel={`Solana DeFi total value locked over ${range} days`}
-                labels={tvlData.map((point) => new Date(`${point.date}T00:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' }))}
+                labels={tvlData.map((point) =>
+                  new Date(`${point.date}T00:00:00Z`).toLocaleDateString(
+                    'en-US',
+                    { month: 'short', day: 'numeric', timeZone: 'UTC' },
+                  ),
+                )}
                 primary={tvlData.map((point) => point.tvl)}
                 primaryColor="#9945ff"
                 primaryLabel="DeFi TVL"
@@ -438,15 +667,164 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
           </Card>
 
           <Card className="border-0 bg-card ring-white/8">
-            <CardHeader><CardTitle className="text-base text-white">Economic indicators</CardTitle><CardDescription>Market and on-chain liquidity context</CardDescription></CardHeader>
+            <CardHeader>
+              <CardTitle className="text-base text-white">
+                Economic indicators
+              </CardTitle>
+              <CardDescription>
+                Market and on-chain liquidity context
+              </CardDescription>
+            </CardHeader>
             <CardContent className="grid grid-cols-2 gap-2">
               {[
-                ['SOL price', usd.format(snapshot.economy.solPrice), pct(snapshot.economy.solPriceChange24h)],
-                ['DEX volume · 24h', `$${compact.format(snapshot.economy.dexVolume24h)}`, 'DefiLlama'],
-                ['Stablecoin supply', `$${compact.format(snapshot.economy.stablecoinSupply)}`, 'on Solana'],
-                ['DEX volume · 7d', `$${compact.format(snapshot.economy.dexVolume7d)}`, 'rolling'],
+                [
+                  'SOL price',
+                  usd.format(snapshot.economy.solPrice),
+                  pct(snapshot.economy.solPriceChange24h),
+                ],
+                [
+                  'DEX volume · 24h',
+                  `$${compact.format(snapshot.economy.dexVolume24h)}`,
+                  'DefiLlama',
+                ],
+                [
+                  'Stablecoin supply',
+                  `$${compact.format(snapshot.economy.stablecoinSupply)}`,
+                  'on Solana',
+                ],
+                [
+                  'DEX volume · 7d',
+                  `$${compact.format(snapshot.economy.dexVolume7d)}`,
+                  'rolling',
+                ],
               ].map(([label, value, detail]) => (
-                <div key={label} className="rounded-lg border border-white/7 bg-white/[0.025] p-3"><p className="text-xs text-zinc-500">{label}</p><p className="mt-2 font-mono text-lg text-white">{value}</p><p className="mt-1 font-mono text-[10px] text-zinc-600">{detail}</p></div>
+                <div
+                  key={label}
+                  className="rounded-lg border border-white/7 bg-white/[0.025] p-3"
+                >
+                  <p className="text-xs text-zinc-500">{label}</p>
+                  <p className="mt-2 font-mono text-lg text-white">{value}</p>
+                  <p className="mt-1 font-mono text-[10px] text-zinc-600">
+                    {detail}
+                  </p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        </section>
+
+        <section className="mt-3 grid gap-3 xl:grid-cols-[1.25fr_0.75fr]">
+          <Card className="border-0 bg-card ring-white/8">
+            <CardHeader className="border-b border-white/7 pb-4">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <CardTitle className="flex items-center gap-2 text-base text-white">
+                    <Activity className="size-4 text-emerald-300" /> Network
+                    activity & fees
+                  </CardTitle>
+                  <CardDescription>
+                    Median consensus across {snapshot.activity.providerCount}{' '}
+                    public data providers · {snapshot.activity.observedDate}
+                  </CardDescription>
+                </div>
+                <Badge
+                  variant="outline"
+                  className="border-violet-400/20 bg-violet-400/7 text-violet-200"
+                >
+                  Solana Data
+                </Badge>
+              </div>
+            </CardHeader>
+            <CardContent className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                [
+                  'Active addresses',
+                  compact.format(snapshot.activity.activeAddresses),
+                  'daily',
+                ],
+                [
+                  'Fee payers',
+                  compact.format(snapshot.activity.feePayers),
+                  'daily',
+                ],
+                [
+                  'Total transactions',
+                  compact.format(snapshot.activity.totalTransactions),
+                  'daily',
+                ],
+                [
+                  'Non-vote failure',
+                  `${snapshot.activity.nonVoteFailurePercent.toFixed(1)}%`,
+                  `${compact.format(snapshot.activity.failedNonVoteTransactions)} failed`,
+                ],
+                [
+                  'Network fees',
+                  `${compact.format(snapshot.activity.networkFeesSol)} SOL`,
+                  usd.format(snapshot.activity.networkFeesUsd),
+                ],
+                [
+                  'Median tx fee',
+                  `${integer.format(snapshot.network.medianTransactionFeeLamports)} lamports`,
+                  'recent finalized block',
+                ],
+                [
+                  'Median priority fee',
+                  `${integer.format(snapshot.network.medianPriorityFeeMicroLamports)} μ-lamports`,
+                  'per compute unit',
+                ],
+                [
+                  'Non-vote TPS',
+                  integer.format(snapshot.performance.at(-1)?.nonVoteTps ?? 0),
+                  'recent RPC sample',
+                ],
+              ].map(([label, value, detail]) => (
+                <div
+                  key={label}
+                  className="rounded-lg border border-white/7 bg-white/[0.025] p-3"
+                >
+                  <p className="text-xs text-zinc-500">{label}</p>
+                  <p className="mt-2 font-mono text-lg text-white">{value}</p>
+                  <p className="mt-1 font-mono text-[10px] text-zinc-600">
+                    {detail}
+                  </p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="border-0 bg-card ring-white/8">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-base text-white">
+                <Sparkles className="size-4 text-violet-300" /> Protocol roadmap
+              </CardTitle>
+              <CardDescription>
+                Status read directly from official SIMD proposals
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-2">
+              {snapshot.developments.map((item) => (
+                <a
+                  key={item.identifier}
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group block rounded-lg border border-white/7 bg-white/[0.02] p-3 transition hover:border-violet-400/20 hover:bg-violet-400/[0.035]"
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="font-mono text-xs text-violet-300">
+                      {item.identifier}
+                    </span>
+                    <span className="font-mono text-[9px] uppercase tracking-wider text-zinc-500">
+                      {item.status}
+                    </span>
+                  </div>
+                  <p className="mt-2 text-sm text-zinc-200 group-hover:text-white">
+                    {item.title}
+                  </p>
+                  <p className="mt-1 text-xs leading-5 text-zinc-500">
+                    {item.detail}
+                  </p>
+                </a>
               ))}
             </CardContent>
           </Card>
@@ -454,21 +832,93 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
 
         <section className="mt-3 grid gap-3 xl:grid-cols-[1.35fr_0.65fr]">
           <Card className="border-0 bg-card ring-white/8">
-            <CardHeader><CardTitle className="flex items-center gap-2 text-base text-white"><UsersRound className="size-4 text-emerald-300" /> Validator watch</CardTitle><CardDescription>Largest observed validators by activated stake</CardDescription></CardHeader>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-base text-white">
+                <UsersRound className="size-4 text-emerald-300" /> Validator
+                watch
+              </CardTitle>
+              <CardDescription>
+                Largest observed validators by activated stake
+              </CardDescription>
+            </CardHeader>
             <CardContent>
               <Table>
-                <TableHeader className="border-white/8 text-[11px] uppercase tracking-wider text-zinc-600"><TableRow className="border-white/8 hover:bg-transparent"><TableHead className="pl-0 text-zinc-600">Identity</TableHead><TableHead className="text-zinc-600">Activated stake</TableHead><TableHead className="text-zinc-600">Commission</TableHead><TableHead className="pr-0 text-right text-zinc-600">Status</TableHead></TableRow></TableHeader>
-                <TableBody>{snapshot.validators.map((validator) => <TableRow key={validator.votePubkey} className="border-white/5 hover:bg-white/[0.025]"><TableCell className="pl-0 font-mono text-xs text-zinc-300">{shortKey(validator.identity)}</TableCell><TableCell className="font-mono text-xs text-zinc-400">{formatStake(validator.activatedStake)}</TableCell><TableCell className="font-mono text-xs text-zinc-400">{validator.commission}%</TableCell><TableCell className="pr-0 text-right"><span className={`inline-flex items-center gap-1.5 text-xs ${validator.status === 'healthy' ? 'text-emerald-300' : 'text-rose-300'}`}><span className={`size-1.5 rounded-full ${validator.status === 'healthy' ? 'bg-emerald-400' : 'bg-rose-400'}`} />{validator.status}</span></TableCell></TableRow>)}</TableBody>
+                <TableHeader className="border-white/8 text-[11px] uppercase tracking-wider text-zinc-600">
+                  <TableRow className="border-white/8 hover:bg-transparent">
+                    <TableHead className="pl-0 text-zinc-600">
+                      Identity
+                    </TableHead>
+                    <TableHead className="text-zinc-600">
+                      Activated stake
+                    </TableHead>
+                    <TableHead className="text-zinc-600">Commission</TableHead>
+                    <TableHead className="pr-0 text-right text-zinc-600">
+                      Status
+                    </TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {snapshot.validators.map((validator) => (
+                    <TableRow
+                      key={validator.votePubkey}
+                      className="border-white/5 hover:bg-white/[0.025]"
+                    >
+                      <TableCell className="pl-0 font-mono text-xs text-zinc-300">
+                        {shortKey(validator.identity)}
+                      </TableCell>
+                      <TableCell className="font-mono text-xs text-zinc-400">
+                        {formatStake(validator.activatedStake)}
+                      </TableCell>
+                      <TableCell className="font-mono text-xs text-zinc-400">
+                        {validator.commission}%
+                      </TableCell>
+                      <TableCell className="pr-0 text-right">
+                        <span
+                          className={`inline-flex items-center gap-1.5 text-xs ${validator.status === 'healthy' ? 'text-emerald-300' : 'text-rose-300'}`}
+                        >
+                          <span
+                            className={`size-1.5 rounded-full ${validator.status === 'healthy' ? 'bg-emerald-400' : 'bg-rose-400'}`}
+                          />
+                          {validator.status}
+                        </span>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
               </Table>
             </CardContent>
           </Card>
 
           <Card className="border-0 bg-card ring-white/8">
-            <CardHeader><CardTitle className="text-base text-white">Agave release radar</CardTitle><CardDescription>Latest validator-client releases</CardDescription></CardHeader>
+            <CardHeader>
+              <CardTitle className="text-base text-white">
+                Agave release radar
+              </CardTitle>
+              <CardDescription>
+                Latest validator-client releases
+              </CardDescription>
+            </CardHeader>
             <CardContent className="space-y-2">
               {snapshot.releases.slice(0, 4).map((release) => (
-                <a key={`${release.tag}-${release.publishedAt}`} href={release.url} target="_blank" rel="noreferrer" className="group flex items-center justify-between gap-3 rounded-lg border border-white/7 bg-white/[0.02] px-3 py-2.5 transition hover:border-violet-400/20 hover:bg-violet-400/[0.035]">
-                  <div className="min-w-0"><p className="truncate text-sm text-zinc-300 group-hover:text-white">{release.title}</p><p className="mt-1 font-mono text-[10px] text-zinc-600">{new Date(release.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</p></div><ExternalLink className="size-3.5 shrink-0 text-zinc-600 group-hover:text-violet-300" />
+                <a
+                  key={`${release.tag}-${release.publishedAt}`}
+                  href={release.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-center justify-between gap-3 rounded-lg border border-white/7 bg-white/[0.02] px-3 py-2.5 transition hover:border-violet-400/20 hover:bg-violet-400/[0.035]"
+                >
+                  <div className="min-w-0">
+                    <p className="truncate text-sm text-zinc-300 group-hover:text-white">
+                      {release.title}
+                    </p>
+                    <p className="mt-1 font-mono text-[10px] text-zinc-600">
+                      {new Date(release.publishedAt).toLocaleDateString(
+                        'en-US',
+                        { month: 'short', day: 'numeric', year: 'numeric' },
+                      )}
+                    </p>
+                  </div>
+                  <ExternalLink className="size-3.5 shrink-0 text-zinc-600 group-hover:text-violet-300" />
                 </a>
               ))}
             </CardContent>
@@ -477,26 +927,67 @@ export function Dashboard({ initialSnapshot }: DashboardProps) {
 
         <section className="mt-3 grid gap-3 lg:grid-cols-[1fr_auto]">
           <Card className="border-0 bg-card ring-white/8">
-            <CardHeader><CardTitle className="text-base text-white">Source coverage</CardTitle><CardDescription>{liveSources}/{snapshot.sources.length} upstream sources live at the latest refresh</CardDescription></CardHeader>
+            <CardHeader>
+              <CardTitle className="text-base text-white">
+                Source coverage
+              </CardTitle>
+              <CardDescription>
+                {liveSources}/{snapshot.sources.length} upstream sources live at
+                the latest refresh
+              </CardDescription>
+            </CardHeader>
             <CardContent className="grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
               {snapshot.sources.map((source) => (
-                <a key={source.name} href={source.url} target="_blank" rel="noreferrer" className="flex items-center justify-between rounded-lg border border-white/7 bg-white/[0.02] px-3 py-2.5 hover:bg-white/[0.04]"><span className="text-sm text-zinc-300">{source.name}</span><span className={`font-mono text-[9px] uppercase tracking-wider ${source.state === 'live' ? 'text-emerald-300' : source.state === 'stale' ? 'text-amber-300' : 'text-rose-300'}`}>{source.state}</span></a>
+                <a
+                  key={source.name}
+                  href={source.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-between rounded-lg border border-white/7 bg-white/[0.02] px-3 py-2.5 hover:bg-white/[0.04]"
+                >
+                  <span className="text-sm text-zinc-300">{source.name}</span>
+                  <span
+                    className={`font-mono text-[9px] uppercase tracking-wider ${source.state === 'live' ? 'text-emerald-300' : source.state === 'stale' ? 'text-amber-300' : 'text-rose-300'}`}
+                  >
+                    {source.state}
+                  </span>
+                </a>
               ))}
             </CardContent>
           </Card>
 
           <Card className="border-0 bg-card ring-white/8 lg:w-[290px]">
-            <CardHeader><CardTitle className="text-base text-white">Portable reports</CardTitle><CardDescription>Same snapshot, two formats</CardDescription></CardHeader>
+            <CardHeader>
+              <CardTitle className="text-base text-white">
+                Portable reports
+              </CardTitle>
+              <CardDescription>Same snapshot, two formats</CardDescription>
+            </CardHeader>
             <CardContent className="flex gap-2">
-              <Button variant="outline" className="flex-1 border-white/10 bg-white/4 text-zinc-200" onClick={exportJson}><FileJson2 data-icon="inline-start" /> JSON</Button>
-              <Button variant="outline" className="flex-1 border-white/10 bg-white/4 text-zinc-200" onClick={exportMarkdown}><FileText data-icon="inline-start" /> Markdown</Button>
+              <Button
+                variant="outline"
+                className="flex-1 border-white/10 bg-white/4 text-zinc-200"
+                onClick={exportJson}
+              >
+                <FileJson2 data-icon="inline-start" /> JSON
+              </Button>
+              <Button
+                variant="outline"
+                className="flex-1 border-white/10 bg-white/4 text-zinc-200"
+                onClick={exportMarkdown}
+              >
+                <FileText data-icon="inline-start" /> Markdown
+              </Button>
             </CardContent>
           </Card>
         </section>
 
         <footer className="mt-6 flex flex-col justify-between gap-2 border-t border-white/7 py-5 text-xs text-zinc-600 sm:flex-row">
           <p>SOL//PULSE · Informational only · No API keys required</p>
-          <p>Generated {generated.toLocaleString('en-CA', { timeZone: 'UTC' })} UTC</p>
+          <p>
+            Generated {generated.toLocaleString('en-CA', { timeZone: 'UTC' })}{' '}
+            UTC
+          </p>
         </footer>
       </div>
     </main>

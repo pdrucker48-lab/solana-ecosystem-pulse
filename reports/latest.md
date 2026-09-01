@@ -1,46 +1,48 @@
 # SOL//PULSE — Solana Ecosystem Report
 
-Generated: 2026-09-01T00:55:47.912Z
+Generated: 2026-09-01T02:30:51.217Z
 Data state: live
 
 ## Briefing
 
-Solana is operating normally with stable throughput and healthy validator participation.
+Solana is operating normally across the monitored network and ecosystem baselines.
 
 ## Network
 
 | Metric | Value |
 | --- | ---: |
-| TPS | 4,095.62 |
+| TPS | 4,091.18 |
 | Median slot time | 314.14 ms |
-| Block height | 421,340,234 |
-| Epoch | 1026 (14.03%) |
-| Active validators | 681 |
-| Delinquent validators | 13 (1.87%) |
+| Block height | 421,358,172 |
+| Epoch | 1026 (18.19%) |
+| Active validators | 680 |
+| Delinquent validators | 14 (2.02%) |
 | SOL supply | 617,200,000 |
 
 ## Economy
 
 | Metric | Value |
 | --- | ---: |
-| SOL price | $103.24 (0.92% 24h) |
-| Solana DeFi TVL | $5,962,558,370.00 |
-| TVL change | 0.03% 1d / 3.93% 7d / 26.35% 30d |
-| DEX volume | $2,101,451,762.73 24h / $15,809,678,830.00 7d |
-| Stablecoin supply | $16,058,735,447.33 |
+| SOL price | $103.14 (1.07% 24h) |
+| Solana DeFi TVL | $5,842,467,213.00 |
+| TVL change | 0.48% 1d / 1.83% 7d / 23.8% 30d |
+| DEX volume | $2,457,773,259.05 24h / $17,424,783,325.05 7d |
+| Stablecoin supply | $16,067,106,756.83 |
 
 ## Signals
 
-- **INFO — Validator participation healthy:** Delinquency is 1.9%, below the 5% watch threshold.
+- **INFO — Validator participation healthy:** Delinquency is 2.0%, below the 5% watch threshold.
 
 ## Data sources
 
 | Source | State | Refresh | URL |
 | --- | --- | --- | --- |
 | Solana RPC | live | 60 sec | https://solana-rpc.publicnode.com |
+| Solana Data | live | 12 hours | https://solana.com/data |
 | DefiLlama | live | 5 min | https://defillama.com/chain/Solana |
 | CoinGecko | live | 5 min | https://www.coingecko.com/en/coins/solana |
 | Agave releases | live | 1 hour | https://github.com/anza-xyz/agave/releases |
+| SIMD repository | live | 1 hour | https://github.com/solana-foundation/solana-improvement-documents |
 
 ---
 

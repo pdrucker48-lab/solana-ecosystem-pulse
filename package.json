@@ -11,6 +11,9 @@
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint app components/dashboard.tsx lib vite.config.ts",
     "reports": "node scripts/capture-report.mjs",
+    "reports:python": "python scripts/solpulse.py",
+    "preflight": "node scripts/preflight.mjs",
+    "preflight:review": "node scripts/preflight.mjs --allow-private",
     "format": "oxfmt"
   },
   "dependencies": {

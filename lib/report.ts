@@ -8,12 +8,24 @@ const usd = new Intl.NumberFormat('en-US', {
 });
 
 export function snapshotToMarkdown(snapshot: EcosystemSnapshot) {
-  const { network, economy } = snapshot;
+  const { network, economy, activity } = snapshot;
   const sourceRows = snapshot.sources
-    .map((source) => `| ${source.name} | ${source.state} | ${source.cadence} | ${source.url} |`)
+    .map(
+      (source) =>
+        `| ${source.name} | ${source.state} | ${source.cadence} | ${source.url} |`,
+    )
     .join('\n');
   const signalRows = snapshot.signals
-    .map((signal) => `- **${signal.severity.toUpperCase()} — ${signal.title}:** ${signal.detail}`)
+    .map(
+      (signal) =>
+        `- **${signal.severity.toUpperCase()} — ${signal.title}:** ${signal.detail}`,
+    )
+    .join('\n');
+  const developmentRows = snapshot.developments
+    .map(
+      (item) =>
+        `| ${item.identifier} | ${item.title} | ${item.status} | [Official proposal](${item.url}) |`,
+    )
     .join('\n');
 
   return `# SOL//PULSE — Solana Ecosystem Report
@@ -30,7 +42,10 @@ ${snapshot.briefing}
 | Metric | Value |
 | --- | ---: |
 | TPS | ${number.format(network.tps)} |
+| Non-vote TPS | ${number.format(snapshot.performance.at(-1)?.nonVoteTps ?? 0)} |
 | Median slot time | ${number.format(network.slotTimeMs)} ms |
+| Median transaction fee | ${number.format(network.medianTransactionFeeLamports)} lamports |
+| Median priority fee | ${number.format(network.medianPriorityFeeMicroLamports)} micro-lamports / compute unit |
 | Block height | ${number.format(network.blockHeight)} |
 | Epoch | ${network.epoch} (${number.format(network.epochProgress)}%) |
 | Active validators | ${number.format(network.activeValidators)} |
@@ -47,9 +62,29 @@ ${snapshot.briefing}
 | DEX volume | ${usd.format(economy.dexVolume24h)} 24h / ${usd.format(economy.dexVolume7d)} 7d |
 | Stablecoin supply | ${usd.format(economy.stablecoinSupply)} |
 
+## Network activity and fees
+
+Multi-provider median for ${activity.observedDate}, calculated from ${activity.providerCount} public providers surfaced by Solana Data.
+
+| Metric | Value |
+| --- | ---: |
+| Active addresses | ${number.format(activity.activeAddresses)} |
+| Fee payers | ${number.format(activity.feePayers)} |
+| Total transactions | ${number.format(activity.totalTransactions)} |
+| Successful non-vote transactions | ${number.format(activity.successfulNonVoteTransactions)} |
+| Failed non-vote transactions | ${number.format(activity.failedNonVoteTransactions)} |
+| Non-vote failure rate | ${number.format(activity.nonVoteFailurePercent)}% |
+| Network fees | ${number.format(activity.networkFeesSol)} SOL / ${usd.format(activity.networkFeesUsd)} |
+
 ## Signals
 
 ${signalRows}
+
+## Protocol roadmap
+
+| Proposal | Development | Status | Source |
+| --- | --- | --- | --- |
+${developmentRows}
 
 ## Data sources
 
