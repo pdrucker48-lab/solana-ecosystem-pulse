@@ -1,6 +1,6 @@
 # SOL//PULSE — Solana Ecosystem Report
 
-Generated: 2026-09-05T06:30:23.791535Z  
+Generated: 2026-09-06T06:31:12.139054Z  
 Data state: live
 
 ## Briefing
@@ -11,40 +11,40 @@ Solana is operating normally across the monitored network and ecosystem baseline
 
 | Metric | Value |
 | --- | ---: |
-| TPS | 3,411.42 |
-| Non-vote TPS | 1,279.00 |
+| TPS | 3,367.95 |
+| Non-vote TPS | 1,218.65 |
 | Median slot time | 315.79 ms |
 | Median transaction fee | 5,000 lamports |
 | Median priority fee | 0 micro-lamports / compute unit |
-| Block height | 422,495,901 |
-| Epoch | 1028 (82.19%) |
+| Block height | 422,769,394 |
+| Epoch | 1029 (45.61%) |
 | Active validators | 677 |
-| Delinquent validators | 18 (2.59%) |
+| Delinquent validators | 16 (2.31%) |
 
 ## Economy
 
 | Metric | Value |
 | --- | ---: |
-| SOL price | $102.03 (-1.35% 24h) |
-| Solana DeFi TVL | $5,856,508,432.00 |
-| DEX volume | $1,847,410,950.00 24h / $14,320,204,945.71 7d |
-| Stablecoin supply | $16,540,205,975.10 |
+| SOL price | $105.76 (3.66% 24h) |
+| Solana DeFi TVL | $5,924,750,516.00 |
+| DEX volume | $1,960,574,882.81 24h / $14,510,564,973.21 7d |
+| Stablecoin supply | $16,618,130,560.67 |
 
 ## Network activity and fees
 
-Multi-provider median for 2026-09-03, calculated from 7 public providers surfaced by Solana Data.
+Multi-provider median for 2026-09-04, calculated from 7 public providers surfaced by Solana Data.
 
 | Metric | Value |
 | --- | ---: |
-| Active addresses | 885,778 |
-| Fee payers | 2,430,480 |
-| Total transactions | 322,525,919 |
-| Non-vote failure rate | 35.14% |
-| Network fees | 5,729.32 SOL / $584,562.65 |
+| Active addresses | 847,037 |
+| Fee payers | 2,250,988 |
+| Total transactions | 309,264,459 |
+| Non-vote failure rate | 30.05% |
+| Network fees | 5,212.90 SOL / $551,315.91 |
 
 ## Signals
 
-- **INFO — Validator participation healthy:** Observed validator delinquency is 2.6%.
+- **INFO — Validator participation healthy:** Observed validator delinquency is 2.3%.
 
 ## Protocol roadmap
 
