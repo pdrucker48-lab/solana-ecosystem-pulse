@@ -1,6 +1,6 @@
 # SOL//PULSE — Solana Ecosystem Report
 
-Generated: 2026-09-16T06:34:35.453535Z  
+Generated: 2026-09-17T06:35:01.561544Z  
 Data state: live
 
 ## Briefing
@@ -11,40 +11,40 @@ Solana is operating normally across the monitored network and ecosystem baseline
 
 | Metric | Value |
 | --- | ---: |
-| TPS | 3,468.25 |
-| Non-vote TPS | 1,339.33 |
-| Median slot time | 317.46 ms |
+| TPS | 3,597.52 |
+| Non-vote TPS | 1,436.68 |
+| Median slot time | 312.50 ms |
 | Median transaction fee | 5,000 lamports |
 | Median priority fee | 0 micro-lamports / compute unit |
-| Block height | 425,496,941 |
-| Epoch | 1035 (77.65%) |
-| Active validators | 678 |
-| Delinquent validators | 11 (1.60%) |
+| Block height | 425,769,421 |
+| Epoch | 1036 (40.78%) |
+| Active validators | 677 |
+| Delinquent validators | 14 (2.03%) |
 
 ## Economy
 
 | Metric | Value |
 | --- | ---: |
-| SOL price | $97.02 (-4.03% 24h) |
-| Solana DeFi TVL | $5,726,306,191.00 |
-| DEX volume | $2,501,403,355.22 24h / $16,836,674,987.28 7d |
-| Stablecoin supply | $15,897,581,608.33 |
+| SOL price | $99.56 (2.59% 24h) |
+| Solana DeFi TVL | $5,800,703,409.00 |
+| DEX volume | $2,733,441,991.18 24h / $16,511,735,241.83 7d |
+| Stablecoin supply | $15,703,799,253.71 |
 
 ## Network activity and fees
 
-Multi-provider median for 2026-09-15, calculated from 4 public providers surfaced by Solana Data.
+Multi-provider median for 2026-09-16, calculated from 4 public providers surfaced by Solana Data.
 
 | Metric | Value |
 | --- | ---: |
-| Active addresses | 807,228 |
-| Fee payers | 2,508,249 |
-| Total transactions | 347,407,067 |
-| Non-vote failure rate | 34.60% |
-| Network fees | 7,142.00 SOL / $692,917.09 |
+| Active addresses | 828,409 |
+| Fee payers | 2,681,949 |
+| Total transactions | 357,883,742 |
+| Non-vote failure rate | 35.47% |
+| Network fees | 7,635.73 SOL / $760,213.24 |
 
 ## Signals
 
-- **INFO — Validator participation healthy:** Observed validator delinquency is 1.6%.
+- **INFO — Validator participation healthy:** Observed validator delinquency is 2.0%.
 
 ## Protocol roadmap
 
