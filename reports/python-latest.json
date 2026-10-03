@@ -1,163 +1,163 @@
 {
-  "generatedAt": "2026-10-02T12:38:12.278839Z",
+  "generatedAt": "2026-10-03T11:41:34.226590Z",
   "state": "live",
   "briefing": "Solana is operating normally across the monitored network and ecosystem baselines.",
   "network": {
-    "tps": 4837.966666666666,
-    "slotTimeMs": 267.85714285714283,
-    "blockHeight": 430651042,
-    "epoch": 1047,
-    "epochProgress": 71.37268518518518,
-    "epochEtaSeconds": 33125.892857142855,
+    "tps": 4094.0,
+    "slotTimeMs": 272.7272727272727,
+    "blockHeight": 430961490,
+    "epoch": 1048,
+    "epochProgress": 43.26851851851852,
+    "epochEtaSeconds": 66839.99999999999,
     "activeValidators": 672,
     "delinquentValidators": 12,
     "delinquentPercent": 1.7543859649122806,
-    "supplySol": 635072898.1928257,
+    "supplySol": 635150611.6437109,
     "medianTransactionFeeLamports": 5000,
     "medianPriorityFeeMicroLamports": 0.0
   },
   "economy": {
-    "solPrice": 122.26,
-    "solPriceChange24h": 3.950428410606278,
-    "tvl": 6690012614,
-    "tvlChange1d": 2.8103525396517166,
-    "tvlChange7d": 3.212755595287115,
-    "tvlChange30d": 18.188900065344914,
-    "dexVolume24h": 2488460102.88,
-    "dexVolume7d": 16949401399.250002,
-    "stablecoinSupply": 16516527626.14
+    "solPrice": 119.39,
+    "solPriceChange24h": -2.161849512273377,
+    "tvl": 6641955597,
+    "tvlChange1d": 1.0146888389222368,
+    "tvlChange7d": 0.1398150227133658,
+    "tvlChange30d": 16.245707674681135,
+    "dexVolume24h": 2760296309.96,
+    "dexVolume7d": 17096701088.58,
+    "stablecoinSupply": 16889787662.9
   },
   "activity": {
-    "observedDate": "2026-10-01",
-    "activeAddresses": 736020.0,
-    "feePayers": 2985022.0,
-    "networkFeesSol": 9438.885222030083,
-    "networkFeesUsd": 1153998.107245398,
-    "totalTransactions": 393066416.0,
-    "successfulNonVoteTransactions": 114923788.0,
-    "failedNonVoteTransactions": 62351365.0,
-    "nonVoteFailurePercent": 35.17208359143258,
+    "observedDate": "2026-10-02",
+    "activeAddresses": 778172.5,
+    "feePayers": 2815025.0,
+    "networkFeesSol": 9217.2779926905,
+    "networkFeesUsd": 1100450.8195473189,
+    "totalTransactions": 397874598.0,
+    "successfulNonVoteTransactions": 120679554.0,
+    "failedNonVoteTransactions": 61227767.0,
+    "nonVoteFailurePercent": 33.65877011623958,
     "providerCount": 5
   },
   "performance": [
     {
       "label": "11m",
-      "tps": 4127.966666666666,
-      "nonVoteTps": 1628.8666666666666,
-      "slotTimeMs": 267.85714285714283
-    },
-    {
-      "label": "10m",
-      "tps": 4408.066666666667,
-      "nonVoteTps": 1942.8,
-      "slotTimeMs": 271.49321266968326
-    },
-    {
-      "label": "9m",
-      "tps": 4388.166666666667,
-      "nonVoteTps": 1891.5166666666667,
-      "slotTimeMs": 267.85714285714283
-    },
-    {
-      "label": "8m",
-      "tps": 4481.3,
-      "nonVoteTps": 2024.5,
-      "slotTimeMs": 272.7272727272727
-    },
-    {
-      "label": "7m",
-      "tps": 6672.766666666666,
-      "nonVoteTps": 4227.9,
-      "slotTimeMs": 275.22935779816515
-    },
-    {
-      "label": "6m",
-      "tps": 5968.166666666667,
-      "nonVoteTps": 3424.0,
-      "slotTimeMs": 262.0087336244541
-    },
-    {
-      "label": "5m",
-      "tps": 5494.2,
-      "nonVoteTps": 2949.4166666666665,
-      "slotTimeMs": 263.1578947368421
-    },
-    {
-      "label": "4m",
-      "tps": 5153.3,
-      "nonVoteTps": 2690.366666666667,
-      "slotTimeMs": 271.49321266968326
-    },
-    {
-      "label": "3m",
-      "tps": 5083.366666666667,
-      "nonVoteTps": 2605.0833333333335,
-      "slotTimeMs": 270.27027027027026
-    },
-    {
-      "label": "2m",
-      "tps": 4660.5,
-      "nonVoteTps": 2137.4,
+      "tps": 3668.1,
+      "nonVoteTps": 1147.3833333333334,
       "slotTimeMs": 265.4867256637168
     },
     {
-      "label": "1m",
-      "tps": 4594.216666666666,
-      "nonVoteTps": 2063.2833333333333,
+      "label": "10m",
+      "tps": 3716.6666666666665,
+      "nonVoteTps": 1239.7666666666667,
+      "slotTimeMs": 270.27027027027026
+    },
+    {
+      "label": "9m",
+      "tps": 3879.4333333333334,
+      "nonVoteTps": 1345.2333333333333,
       "slotTimeMs": 264.3171806167401
     },
     {
+      "label": "8m",
+      "tps": 3941.6666666666665,
+      "nonVoteTps": 1398.5166666666667,
+      "slotTimeMs": 263.1578947368421
+    },
+    {
+      "label": "7m",
+      "tps": 3866.983333333333,
+      "nonVoteTps": 1412.25,
+      "slotTimeMs": 272.7272727272727
+    },
+    {
+      "label": "6m",
+      "tps": 3982.9333333333334,
+      "nonVoteTps": 1482.3166666666666,
+      "slotTimeMs": 269.05829596412553
+    },
+    {
+      "label": "5m",
+      "tps": 4145.1,
+      "nonVoteTps": 1645.7,
+      "slotTimeMs": 266.6666666666667
+    },
+    {
+      "label": "4m",
+      "tps": 4205.3,
+      "nonVoteTps": 1715.7666666666667,
+      "slotTimeMs": 266.6666666666667
+    },
+    {
+      "label": "3m",
+      "tps": 4268.0,
+      "nonVoteTps": 1803.9833333333333,
+      "slotTimeMs": 273.972602739726
+    },
+    {
+      "label": "2m",
+      "tps": 4399.766666666666,
+      "nonVoteTps": 1877.75,
+      "slotTimeMs": 266.6666666666667
+    },
+    {
+      "label": "1m",
+      "tps": 4387.966666666666,
+      "nonVoteTps": 1888.3333333333333,
+      "slotTimeMs": 266.6666666666667
+    },
+    {
       "label": "now",
-      "tps": 4837.966666666666,
-      "nonVoteTps": 2337.233333333333,
-      "slotTimeMs": 267.85714285714283
+      "tps": 4094.0,
+      "nonVoteTps": 1642.8333333333333,
+      "slotTimeMs": 272.7272727272727
     }
   ],
   "activityHistory": [
     {
-      "date": "2026-09-26",
-      "activeAddresses": 762352.0,
-      "feePayers": 2469066.0,
-      "networkFeesSol": 9952.17098722011,
-      "totalTransactions": 397496035.0
-    },
-    {
       "date": "2026-09-27",
       "activeAddresses": 734269.0,
       "feePayers": 2735774.5,
-      "networkFeesSol": 7885.796968918974,
+      "networkFeesSol": 7885.79696891896,
       "totalTransactions": 380759936.0
     },
     {
       "date": "2026-09-28",
-      "activeAddresses": 831246.0,
+      "activeAddresses": 831249.0,
       "feePayers": 3302395.0,
       "networkFeesSol": 8952.749992683297,
       "totalTransactions": 399403711.0
     },
     {
       "date": "2026-09-29",
-      "activeAddresses": 791448.0,
+      "activeAddresses": 791453.0,
       "feePayers": 2955182.0,
-      "networkFeesSol": 8972.811062127428,
+      "networkFeesSol": 8972.811062127423,
       "totalTransactions": 380228110.0
     },
     {
       "date": "2026-09-30",
-      "activeAddresses": 807241.0,
+      "activeAddresses": 807252.0,
       "feePayers": 3022406.0,
-      "networkFeesSol": 8897.640429719668,
+      "networkFeesSol": 8897.640429719657,
       "totalTransactions": 386186613.0
     },
     {
       "date": "2026-10-01",
-      "activeAddresses": 736020.0,
-      "feePayers": 2985022.0,
-      "networkFeesSol": 9438.885222030083,
+      "activeAddresses": 818001.0,
+      "feePayers": 2985043.0,
+      "networkFeesSol": 9438.88522202367,
       "totalTransactions": 393066416.0
     },
     {
       "date": "2026-10-02",
+      "activeAddresses": 778172.5,
+      "feePayers": 2815025.0,
+      "networkFeesSol": 9217.2779926905,
+      "totalTransactions": 397874598.0
+    },
+    {
+      "date": "2026-10-03",
       "activeAddresses": 0,
       "feePayers": 0,
       "networkFeesSol": 0,
@@ -165,10 +165,6 @@
     }
   ],
   "tvlHistory": [
-    {
-      "date": "2026-09-02",
-      "tvl": 5660440710
-    },
     {
       "date": "2026-09-03",
       "tvl": 5713721160
@@ -287,7 +283,11 @@
     },
     {
       "date": "2026-10-02",
-      "tvl": 6690012614
+      "tvl": 6575237397
+    },
+    {
+      "date": "2026-10-03",
+      "tvl": 6641955597
     }
   ],
   "validators": [
@@ -350,6 +350,12 @@
   ],
   "releases": [
     {
+      "title": "Release v4.5.0-alpha.1",
+      "tag": "v4.5.0-alpha.1",
+      "publishedAt": "2026-10-03T06:50:48Z",
+      "url": "https://github.com/anza-xyz/agave/releases/tag/v4.5.0-alpha.1"
+    },
+    {
       "title": "Release v4.4.0-beta.0",
       "tag": "v4.4.0-beta.0",
       "publishedAt": "2026-09-28T15:10:04Z",
@@ -366,12 +372,6 @@
       "tag": "v4.3.0",
       "publishedAt": "2026-09-18T12:15:17Z",
       "url": "https://github.com/anza-xyz/agave/releases/tag/v4.3.0"
-    },
-    {
-      "title": "Release v4.3.0-rc.1",
-      "tag": "v4.3.0-rc.1",
-      "publishedAt": "2026-09-11T14:39:49Z",
-      "url": "https://github.com/anza-xyz/agave/releases/tag/v4.3.0-rc.1"
     }
   ],
   "developments": [
