@@ -1,6 +1,6 @@
 # SOL//PULSE — Solana Ecosystem Report
 
-Generated: 2026-10-16T11:27:05.589554Z  
+Generated: 2026-10-17T10:47:10.702499Z  
 Data state: live
 
 ## Briefing
@@ -11,13 +11,13 @@ Solana is operating normally across the monitored network and ecosystem baseline
 
 | Metric | Value |
 | --- | ---: |
-| TPS | 5,002.85 |
-| Non-vote TPS | 1,869.10 |
-| Median slot time | 213.52 ms |
+| TPS | 4,228.98 |
+| Non-vote TPS | 1,118.45 |
+| Median slot time | 215.05 ms |
 | Median transaction fee | 5,000 lamports |
 | Median priority fee | 0 micro-lamports / compute unit |
-| Block height | 435,656,286 |
-| Epoch | 1059 (30.66%) |
+| Block height | 436,043,994 |
+| Epoch | 1060 (20.51%) |
 | Active validators | 672 |
 | Delinquent validators | 9 (1.32%) |
 
@@ -25,22 +25,22 @@ Solana is operating normally across the monitored network and ecosystem baseline
 
 | Metric | Value |
 | --- | ---: |
-| SOL price | $106.86 (4.53% 24h) |
-| Solana DeFi TVL | $5,992,199,321.00 |
-| DEX volume | $2,539,283,878.03 24h / $13,675,213,643.54 7d |
-| Stablecoin supply | $16,162,660,267.56 |
+| SOL price | $104.83 (-1.54% 24h) |
+| Solana DeFi TVL | $5,943,898,431.00 |
+| DEX volume | $2,411,577,773.12 24h / $13,852,658,769.72 7d |
+| Stablecoin supply | $15,955,582,026.43 |
 
 ## Network activity and fees
 
-Multi-provider median for 2026-10-14, calculated from 8 public providers surfaced by Solana Data.
+Multi-provider median for 2026-10-16, calculated from 5 public providers surfaced by Solana Data.
 
 | Metric | Value |
 | --- | ---: |
-| Active addresses | 786,859 |
-| Fee payers | 3,025,437 |
-| Total transactions | 429,783,624 |
-| Non-vote failure rate | 29.74% |
-| Network fees | 7,217.10 SOL / $771,218.78 |
+| Active addresses | 682,462 |
+| Fee payers | 2,957,929 |
+| Total transactions | 437,908,791 |
+| Non-vote failure rate | 30.33% |
+| Network fees | 7,431.78 SOL / $779,073.56 |
 
 ## Signals
 
