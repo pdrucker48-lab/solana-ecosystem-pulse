@@ -1,6 +1,6 @@
 # SOL//PULSE — Solana Ecosystem Report
 
-Generated: 2026-10-21T11:51:58.510866Z  
+Generated: 2026-10-22T11:55:26.433837Z  
 Data state: live
 
 ## Briefing
@@ -11,40 +11,40 @@ Solana is operating normally across the monitored network and ecosystem baseline
 
 | Metric | Value |
 | --- | ---: |
-| TPS | 4,479.48 |
-| Non-vote TPS | 1,389.65 |
-| Median slot time | 215.05 ms |
+| TPS | 1,921.00 |
+| Non-vote TPS | 1,921.00 |
+| Median slot time | 210.53 ms |
 | Median transaction fee | 5,000 lamports |
 | Median priority fee | 0 micro-lamports / compute unit |
-| Block height | 437,653,742 |
-| Epoch | 1063 (93.28%) |
+| Block height | 438,059,795 |
+| Epoch | 1064 (87.50%) |
 | Active validators | 668 |
-| Delinquent validators | 11 (1.62%) |
+| Delinquent validators | 9 (1.33%) |
 
 ## Economy
 
 | Metric | Value |
 | --- | ---: |
-| SOL price | $106.79 (2.69% 24h) |
-| Solana DeFi TVL | $5,969,870,369.00 |
-| DEX volume | $2,437,800,207.00 24h / $14,298,179,347.46 7d |
-| Stablecoin supply | $15,933,636,512.23 |
+| SOL price | $104.48 (-2.18% 24h) |
+| Solana DeFi TVL | $5,882,647,159.00 |
+| DEX volume | $2,270,402,206.37 24h / $14,449,639,597.69 7d |
+| Stablecoin supply | $16,085,297,883.63 |
 
 ## Network activity and fees
 
-Multi-provider median for 2026-10-20, calculated from 5 public providers surfaced by Solana Data.
+Multi-provider median for 2026-10-21, calculated from 5 public providers surfaced by Solana Data.
 
 | Metric | Value |
 | --- | ---: |
-| Active addresses | 685,658 |
-| Fee payers | 2,803,726 |
-| Total transactions | 440,324,544 |
-| Non-vote failure rate | 34.55% |
-| Network fees | 7,528.42 SOL / $803,960.11 |
+| Active addresses | 617,253 |
+| Fee payers | 2,825,832 |
+| Total transactions | 325,169,277 |
+| Non-vote failure rate | 35.11% |
+| Network fees | 6,832.76 SOL / $713,887.15 |
 
 ## Signals
 
-- **INFO — Validator participation healthy:** Observed validator delinquency is 1.6%.
+- **INFO — Validator participation healthy:** Observed validator delinquency is 1.3%.
 
 ## Protocol roadmap
 
