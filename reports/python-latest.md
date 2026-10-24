@@ -1,51 +1,50 @@
 # SOL//PULSE — Solana Ecosystem Report
 
-Generated: 2026-10-23T11:41:45.568047Z  
+Generated: 2026-10-24T11:04:01.126180Z  
 Data state: live
 
 ## Briefing
 
-Solana is online with 1 unusual signal under watch.
+Solana is operating normally across the monitored network and ecosystem baselines.
 
 ## Network
 
 | Metric | Value |
 | --- | ---: |
-| TPS | 2,065.15 |
-| Non-vote TPS | 2,065.15 |
-| Median slot time | 211.27 ms |
+| TPS | 1,227.67 |
+| Non-vote TPS | 1,227.67 |
+| Median slot time | 209.06 ms |
 | Median transaction fee | 5,000 lamports |
 | Median priority fee | 0 micro-lamports / compute unit |
-| Block height | 438,462,060 |
-| Epoch | 1065 (80.97%) |
-| Active validators | 655 |
-| Delinquent validators | 21 (3.11%) |
+| Block height | 438,856,903 |
+| Epoch | 1066 (72.79%) |
+| Active validators | 664 |
+| Delinquent validators | 14 (2.06%) |
 
 ## Economy
 
 | Metric | Value |
 | --- | ---: |
-| SOL price | $104.15 (-0.37% 24h) |
-| Solana DeFi TVL | $5,831,774,845.00 |
-| DEX volume | $2,039,384,832.23 24h / $13,689,165,823.89 7d |
-| Stablecoin supply | $15,879,885,720.31 |
+| SOL price | $101.59 (-2.12% 24h) |
+| Solana DeFi TVL | $5,739,950,436.00 |
+| DEX volume | $1,997,070,440.37 24h / $13,518,106,512.17 7d |
+| Stablecoin supply | $15,840,795,971.74 |
 
 ## Network activity and fees
 
-Multi-provider median for 2026-10-22, calculated from 5 public providers surfaced by Solana Data.
+Multi-provider median for 2026-10-23, calculated from 5 public providers surfaced by Solana Data.
 
 | Metric | Value |
 | --- | ---: |
-| Active addresses | 630,051 |
-| Fee payers | 2,585,670 |
-| Total transactions | 174,604,781 |
-| Non-vote failure rate | 35.54% |
-| Network fees | 6,104.20 SOL / $635,752.22 |
+| Active addresses | 623,030 |
+| Fee payers | 2,548,886 |
+| Total transactions | 164,950,807 |
+| Non-vote failure rate | 34.30% |
+| Network fees | 5,482.76 SOL / $556,993.55 |
 
 ## Signals
 
-- **INFO — Validator participation healthy:** Observed validator delinquency is 3.1%.
-- **WATCH — TPS outside recent baseline:** Current TPS is 33.5% above the preceding sample mean.
+- **INFO — Validator participation healthy:** Observed validator delinquency is 2.1%.
 
 ## Protocol roadmap
 
