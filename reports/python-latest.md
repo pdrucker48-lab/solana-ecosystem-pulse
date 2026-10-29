@@ -1,6 +1,6 @@
 # SOL//PULSE — Solana Ecosystem Report
 
-Generated: 2026-10-28T12:58:01.481517Z  
+Generated: 2026-10-29T13:04:52.677913Z  
 Data state: live
 
 ## Briefing
@@ -11,47 +11,47 @@ Solana is operating normally across the monitored network and ecosystem baseline
 
 | Metric | Value |
 | --- | ---: |
-| TPS | 1,658.33 |
-| Non-vote TPS | 1,658.33 |
-| Median slot time | 214.29 ms |
+| TPS | 1,787.40 |
+| Non-vote TPS | 1,787.38 |
+| Median slot time | 210.53 ms |
 | Median transaction fee | 5,000 lamports |
 | Median priority fee | 0 micro-lamports / compute unit |
-| Block height | 440,509,253 |
-| Epoch | 1070 (56.65%) |
-| Active validators | 661 |
-| Delinquent validators | 30 (4.34%) |
+| Block height | 440,914,701 |
+| Epoch | 1071 (50.76%) |
+| Active validators | 664 |
+| Delinquent validators | 25 (3.63%) |
 
 ## Economy
 
 | Metric | Value |
 | --- | ---: |
-| SOL price | $101.43 (0.51% 24h) |
-| Solana DeFi TVL | $5,767,663,049.00 |
-| DEX volume | $1,582,952,703.63 24h / $12,833,151,119.25 7d |
-| Stablecoin supply | $15,709,261,361.86 |
+| SOL price | $100.63 (-0.76% 24h) |
+| Solana DeFi TVL | $5,624,395,341.00 |
+| DEX volume | $1,733,397,982.06 24h / $12,296,146,894.94 7d |
+| Stablecoin supply | $15,622,236,278.74 |
 
 ## Network activity and fees
 
-Multi-provider median for 2026-10-27, calculated from 4 public providers surfaced by Solana Data.
+Multi-provider median for 2026-08-30, calculated from 8 public providers surfaced by Solana Data.
 
 | Metric | Value |
 | --- | ---: |
-| Active addresses | 595,926 |
-| Fee payers | 2,610,492 |
-| Total transactions | 153,893,657 |
-| Non-vote failure rate | 35.98% |
-| Network fees | 5,226.95 SOL / $530,169.49 |
+| Active addresses | 725,539 |
+| Fee payers | 2,078,143 |
+| Total transactions | 331,017,665 |
+| Non-vote failure rate | 39.92% |
+| Network fees | 6,614.98 SOL / $665,665.88 |
 
 ## Signals
 
-- **INFO — Validator participation healthy:** Observed validator delinquency is 4.3%.
+- **INFO — Validator participation healthy:** Observed validator delinquency is 3.6%.
 
 ## Protocol roadmap
 
 | Proposal | Development | Status | Source |
 | --- | --- | --- | --- |
 | SIMD-0326 | Alpenglow | Review | [Official proposal](https://github.com/solana-foundation/solana-improvement-documents/blob/main/proposals/0326-alpenglow.md) |
-| SIMD-0525 | Reduce Slot Times | Draft | [Official proposal](https://github.com/solana-foundation/solana-improvement-documents/blob/main/proposals/0525-reduce-slot-times.md) |
+| SIMD-0525 | Reduce Slot Times | Activated | [Official proposal](https://github.com/solana-foundation/solana-improvement-documents/blob/main/proposals/0525-reduce-slot-times.md) |
 
 ## Data sources
 
