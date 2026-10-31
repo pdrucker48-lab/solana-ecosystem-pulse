@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-10-30T12:58:13.501344Z",
+  "generatedAt": "2026-10-31T12:35:02.936549Z",
   "state": "live",
   "briefing": "Solana is operating normally across the monitored network and ecosystem baselines.",
   "network": {
-    "tps": 1256.8666666666666,
-    "slotTimeMs": 214.28571428571428,
-    "blockHeight": 441315908,
-    "epoch": 1072,
-    "epochProgress": 43.876157407407405,
-    "epochEtaSeconds": 51954.642857142855,
+    "tps": 1106.75,
+    "slotTimeMs": 218.18181818181816,
+    "blockHeight": 441712307,
+    "epoch": 1073,
+    "epochProgress": 35.75277777777778,
+    "epochEtaSeconds": 60555.92727272727,
     "activeValidators": 665,
-    "delinquentValidators": 26,
-    "delinquentPercent": 3.762662807525326,
-    "supplySol": 636700281.6519914,
+    "delinquentValidators": 27,
+    "delinquentPercent": 3.901734104046243,
+    "supplySol": 636761203.5124485,
     "medianTransactionFeeLamports": 5000,
     "medianPriorityFeeMicroLamports": 0.0
   },
   "economy": {
-    "solPrice": 96.58,
-    "solPriceChange24h": -3.7833764342246794,
-    "tvl": 5394142997,
-    "tvlChange1d": -5.27785167796229,
-    "tvlChange7d": -7.727765322510026,
-    "tvlChange30d": -16.547037339552453,
-    "dexVolume24h": 2295364281.7000003,
-    "dexVolume7d": 12552061421.410002,
-    "stablecoinSupply": 15385538912.02
+    "solPrice": 95.84,
+    "solPriceChange24h": -0.7289814033059573,
+    "tvl": 5417511136,
+    "tvlChange1d": 1.3997832944624355,
+    "tvlChange7d": -5.940304775565243,
+    "tvlChange30d": -15.409139975436315,
+    "dexVolume24h": 2117396479.19,
+    "dexVolume7d": 12672387460.230003,
+    "stablecoinSupply": 15418421873.46
   },
   "activity": {
     "observedDate": "2026-08-30",
     "activeAddresses": 725539,
     "feePayers": 2078143,
     "networkFeesSol": 6614.984404558824,
-    "networkFeesUsd": 638875.1937922912,
+    "networkFeesUsd": 633980.1053329178,
     "totalTransactions": 331017665,
     "successfulNonVoteTransactions": 87991006,
     "failedNonVoteTransactions": 58461005,
@@ -93,75 +93,75 @@
   "performance": [
     {
       "label": "11m",
-      "tps": 1389.8,
-      "nonVoteTps": 1389.8,
-      "slotTimeMs": 212.01413427561837
+      "tps": 1125.2666666666667,
+      "nonVoteTps": 1125.2666666666667,
+      "slotTimeMs": 213.52313167259788
     },
     {
       "label": "10m",
-      "tps": 1396.3833333333334,
-      "nonVoteTps": 1396.3833333333334,
-      "slotTimeMs": 215.82733812949638
+      "tps": 1074.65,
+      "nonVoteTps": 1074.65,
+      "slotTimeMs": 205.4794520547945
     },
     {
       "label": "9m",
-      "tps": 1486.9,
-      "nonVoteTps": 1486.9,
-      "slotTimeMs": 215.82733812949638
+      "tps": 1200.3166666666666,
+      "nonVoteTps": 1200.3166666666666,
+      "slotTimeMs": 213.52313167259788
     },
     {
       "label": "8m",
-      "tps": 1290.4166666666667,
-      "nonVoteTps": 1290.4166666666667,
-      "slotTimeMs": 215.05376344086022
+      "tps": 1259.9,
+      "nonVoteTps": 1259.9,
+      "slotTimeMs": 214.28571428571428
     },
     {
       "label": "7m",
-      "tps": 1331.7666666666667,
-      "nonVoteTps": 1331.7666666666667,
-      "slotTimeMs": 212.01413427561837
+      "tps": 1287.8166666666666,
+      "nonVoteTps": 1287.8166666666666,
+      "slotTimeMs": 213.52313167259788
     },
     {
       "label": "6m",
-      "tps": 1284.9333333333334,
-      "nonVoteTps": 1284.9333333333334,
-      "slotTimeMs": 215.05376344086022
+      "tps": 1097.7166666666667,
+      "nonVoteTps": 1097.7166666666667,
+      "slotTimeMs": 217.3913043478261
     },
     {
       "label": "5m",
-      "tps": 1289.7166666666667,
-      "nonVoteTps": 1289.7166666666667,
-      "slotTimeMs": 215.82733812949638
+      "tps": 1132.0333333333333,
+      "nonVoteTps": 1132.0333333333333,
+      "slotTimeMs": 212.7659574468085
     },
     {
       "label": "4m",
-      "tps": 1395.2833333333333,
-      "nonVoteTps": 1395.2833333333333,
-      "slotTimeMs": 212.01413427561837
+      "tps": 1111.8833333333334,
+      "nonVoteTps": 1111.8833333333334,
+      "slotTimeMs": 213.52313167259788
     },
     {
       "label": "3m",
-      "tps": 1513.1,
-      "nonVoteTps": 1513.1,
-      "slotTimeMs": 212.01413427561837
+      "tps": 1458.5833333333333,
+      "nonVoteTps": 1458.5833333333333,
+      "slotTimeMs": 216.60649819494586
     },
     {
       "label": "2m",
-      "tps": 1606.05,
-      "nonVoteTps": 1606.05,
-      "slotTimeMs": 214.28571428571428
+      "tps": 1191.3833333333334,
+      "nonVoteTps": 1191.3833333333334,
+      "slotTimeMs": 207.61245674740482
     },
     {
       "label": "1m",
-      "tps": 1283.85,
-      "nonVoteTps": 1283.85,
-      "slotTimeMs": 214.28571428571428
+      "tps": 1053.1,
+      "nonVoteTps": 1053.1,
+      "slotTimeMs": 210.52631578947367
     },
     {
       "label": "now",
-      "tps": 1256.8666666666666,
-      "nonVoteTps": 1256.8666666666666,
-      "slotTimeMs": 214.28571428571428
+      "tps": 1106.75,
+      "nonVoteTps": 1106.75,
+      "slotTimeMs": 218.18181818181816
     }
   ],
   "activityHistory": [
@@ -216,10 +216,6 @@
     }
   ],
   "tvlHistory": [
-    {
-      "date": "2026-09-30",
-      "tvl": 6463692630
-    },
     {
       "date": "2026-10-01",
       "tvl": 6404369378
@@ -306,39 +302,43 @@
     },
     {
       "date": "2026-10-22",
-      "tvl": 5962269230
+      "tvl": 5962255047
     },
     {
       "date": "2026-10-23",
-      "tvl": 5845900466
+      "tvl": 5845886283
     },
     {
       "date": "2026-10-24",
-      "tvl": 5759666203
+      "tvl": 5759652020
     },
     {
       "date": "2026-10-25",
-      "tvl": 5759837832
+      "tvl": 5759823649
     },
     {
       "date": "2026-10-26",
-      "tvl": 5688810605
+      "tvl": 5688796422
     },
     {
       "date": "2026-10-27",
-      "tvl": 5649658418
+      "tvl": 5649644235
     },
     {
       "date": "2026-10-28",
-      "tvl": 5693302139
+      "tvl": 5693287956
     },
     {
       "date": "2026-10-29",
-      "tvl": 5694700862
+      "tvl": 5694686678
     },
     {
       "date": "2026-10-30",
-      "tvl": 5394142997
+      "tvl": 5342724570
+    },
+    {
+      "date": "2026-10-31",
+      "tvl": 5417511136
     }
   ],
   "validators": [
@@ -396,7 +396,7 @@
     {
       "severity": "info",
       "title": "Validator participation healthy",
-      "detail": "Observed validator delinquency is 3.8%."
+      "detail": "Observed validator delinquency is 3.9%."
     }
   ],
   "releases": [
