@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-11-05T14:41:04.202896Z",
+  "generatedAt": "2026-11-06T14:19:02.234460Z",
   "state": "live",
-  "briefing": "Solana is operating normally across the monitored network and ecosystem baselines.",
+  "briefing": "Solana is online with 1 unusual signal under watch.",
   "network": {
-    "tps": 3049.6833333333334,
+    "tps": 1323.8666666666666,
     "slotTimeMs": 209.05923344947735,
-    "blockHeight": 443762740,
-    "epoch": 1078,
-    "epochProgress": 10.82662037037037,
-    "epochEtaSeconds": 80535.67944250871,
-    "activeValidators": 663,
-    "delinquentValidators": 31,
-    "delinquentPercent": 4.46685878962536,
-    "supplySol": 637066897.6482556,
+    "blockHeight": 444159879,
+    "epoch": 1079,
+    "epochProgress": 2.897685185185185,
+    "epochEtaSeconds": 87696.58536585365,
+    "activeValidators": 656,
+    "delinquentValidators": 40,
+    "delinquentPercent": 5.747126436781609,
+    "supplySol": 637127961.9120983,
     "medianTransactionFeeLamports": 5000,
     "medianPriorityFeeMicroLamports": 0.0
   },
   "economy": {
-    "solPrice": 94.46,
-    "solPriceChange24h": 1.0229424530423148,
-    "tvl": 5520916528,
-    "tvlChange1d": 2.5678569457838547,
-    "tvlChange7d": -3.0514435617909865,
-    "tvlChange30d": -15.789357735580184,
-    "dexVolume24h": 2385538829.94,
-    "dexVolume7d": 12391377529.61,
-    "stablecoinSupply": 15101896773.42
+    "solPrice": 89.92,
+    "solPriceChange24h": -5.530848116913529,
+    "tvl": 5296103173,
+    "tvlChange1d": -4.296402488998604,
+    "tvlChange7d": -0.8863022410338286,
+    "tvlChange30d": -19.430923251654466,
+    "dexVolume24h": 2198364299.2,
+    "dexVolume7d": 12294368648.110003,
+    "stablecoinSupply": 14951721146.01
   },
   "activity": {
     "observedDate": "2026-08-30",
     "activeAddresses": 725539,
     "feePayers": 2078143,
     "networkFeesSol": 6614.984404558824,
-    "networkFeesUsd": 624851.4268546265,
+    "networkFeesUsd": 594819.3976579295,
     "totalTransactions": 331017665,
     "successfulNonVoteTransactions": 87991006,
     "failedNonVoteTransactions": 58461005,
@@ -93,74 +93,74 @@
   "performance": [
     {
       "label": "11m",
-      "tps": 1792.4166666666667,
-      "nonVoteTps": 1792.4166666666667,
-      "slotTimeMs": 210.52631578947367
+      "tps": 1624.3,
+      "nonVoteTps": 1624.3,
+      "slotTimeMs": 220.58823529411765
     },
     {
       "label": "10m",
-      "tps": 3007.366666666667,
-      "nonVoteTps": 3007.366666666667,
-      "slotTimeMs": 212.7659574468085
+      "tps": 1848.1333333333334,
+      "nonVoteTps": 1848.1333333333334,
+      "slotTimeMs": 215.82733812949638
     },
     {
       "label": "9m",
-      "tps": 3228.7833333333333,
-      "nonVoteTps": 3228.7833333333333,
+      "tps": 1560.4,
+      "nonVoteTps": 1560.4,
       "slotTimeMs": 212.01413427561837
     },
     {
       "label": "8m",
-      "tps": 2954.6666666666665,
-      "nonVoteTps": 2954.6666666666665,
-      "slotTimeMs": 213.52313167259788
+      "tps": 1330.55,
+      "nonVoteTps": 1330.55,
+      "slotTimeMs": 212.01413427561837
     },
     {
       "label": "7m",
-      "tps": 2491.15,
-      "nonVoteTps": 2491.15,
-      "slotTimeMs": 211.26760563380282
+      "tps": 1583.0833333333333,
+      "nonVoteTps": 1583.0833333333333,
+      "slotTimeMs": 212.01413427561837
     },
     {
       "label": "6m",
-      "tps": 2347.8333333333335,
-      "nonVoteTps": 2347.8333333333335,
-      "slotTimeMs": 209.7902097902098
-    },
-    {
-      "label": "5m",
-      "tps": 2497.95,
-      "nonVoteTps": 2497.95,
+      "tps": 1844.8166666666666,
+      "nonVoteTps": 1844.8166666666666,
       "slotTimeMs": 213.52313167259788
     },
     {
+      "label": "5m",
+      "tps": 1621.2666666666667,
+      "nonVoteTps": 1621.2666666666667,
+      "slotTimeMs": 222.2222222222222
+    },
+    {
       "label": "4m",
-      "tps": 3269.8333333333335,
-      "nonVoteTps": 3269.8333333333335,
-      "slotTimeMs": 211.26760563380282
+      "tps": 1555.5333333333333,
+      "nonVoteTps": 1555.5333333333333,
+      "slotTimeMs": 212.7659574468085
     },
     {
       "label": "3m",
-      "tps": 3155.0833333333335,
-      "nonVoteTps": 3155.0833333333335,
+      "tps": 1529.8666666666666,
+      "nonVoteTps": 1529.85,
       "slotTimeMs": 212.01413427561837
     },
     {
       "label": "2m",
-      "tps": 3323.35,
-      "nonVoteTps": 3323.35,
-      "slotTimeMs": 212.01413427561837
+      "tps": 1145.45,
+      "nonVoteTps": 1145.45,
+      "slotTimeMs": 213.52313167259788
     },
     {
       "label": "1m",
-      "tps": 2997.1666666666665,
-      "nonVoteTps": 2997.1666666666665,
-      "slotTimeMs": 214.28571428571428
+      "tps": 1199.15,
+      "nonVoteTps": 1199.15,
+      "slotTimeMs": 209.7902097902098
     },
     {
       "label": "now",
-      "tps": 3049.6833333333334,
-      "nonVoteTps": 3049.6833333333334,
+      "tps": 1323.8666666666666,
+      "nonVoteTps": 1323.8666666666666,
       "slotTimeMs": 209.05923344947735
     }
   ],
@@ -216,10 +216,6 @@
     }
   ],
   "tvlHistory": [
-    {
-      "date": "2026-10-06",
-      "tvl": 6556079350
-    },
     {
       "date": "2026-10-07",
       "tvl": 6573369569
@@ -314,31 +310,35 @@
     },
     {
       "date": "2026-10-30",
-      "tvl": 5342724570
+      "tvl": 5343462400
     },
     {
       "date": "2026-10-31",
-      "tvl": 5450268523
+      "tvl": 5451006353
     },
     {
       "date": "2026-11-01",
-      "tvl": 5405600661
+      "tvl": 5409633258
     },
     {
       "date": "2026-11-02",
-      "tvl": 5458172600
+      "tvl": 5462205197
     },
     {
       "date": "2026-11-03",
-      "tvl": 5399732208
+      "tvl": 5403764724
     },
     {
       "date": "2026-11-04",
-      "tvl": 5382696580
+      "tvl": 5386729096
     },
     {
       "date": "2026-11-05",
-      "tvl": 5520916528
+      "tvl": 5533860075
+    },
+    {
+      "date": "2026-11-06",
+      "tvl": 5296103173
     }
   ],
   "validators": [
@@ -394,12 +394,24 @@
   ],
   "signals": [
     {
-      "severity": "info",
-      "title": "Validator participation healthy",
-      "detail": "Observed validator delinquency is 4.5%."
+      "severity": "watch",
+      "title": "Validator delinquency elevated",
+      "detail": "Observed validator delinquency is 5.7%."
     }
   ],
   "releases": [
+    {
+      "title": "Release v4.5.0-beta.0",
+      "tag": "v4.5.0-beta.0",
+      "publishedAt": "2026-11-06T08:17:22Z",
+      "url": "https://github.com/anza-xyz/agave/releases/tag/v4.5.0-beta.0"
+    },
+    {
+      "title": "Release v4.4.1",
+      "tag": "v4.4.1",
+      "publishedAt": "2026-11-05T18:33:50Z",
+      "url": "https://github.com/anza-xyz/agave/releases/tag/v4.4.1"
+    },
     {
       "title": "Release v4.4.0",
       "tag": "v4.4.0",
@@ -411,18 +423,6 @@
       "tag": "v4.5.0-alpha.4",
       "publishedAt": "2026-10-26T20:06:18Z",
       "url": "https://github.com/anza-xyz/agave/releases/tag/v4.5.0-alpha.4"
-    },
-    {
-      "title": "Release v4.4.0-rc.1",
-      "tag": "v4.4.0-rc.1",
-      "publishedAt": "2026-10-26T21:15:55Z",
-      "url": "https://github.com/anza-xyz/agave/releases/tag/v4.4.0-rc.1"
-    },
-    {
-      "title": "Release v4.3.2",
-      "tag": "v4.3.2",
-      "publishedAt": "2026-10-15T22:20:41Z",
-      "url": "https://github.com/anza-xyz/agave/releases/tag/v4.3.2"
     }
   ],
   "developments": [
