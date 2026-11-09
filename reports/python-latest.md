@@ -1,34 +1,34 @@
 # SOL//PULSE — Solana Ecosystem Report
 
-Generated: 2026-11-08T13:27:24.092019Z  
+Generated: 2026-11-09T16:23:50.997985Z  
 Data state: live
 
 ## Briefing
 
-Solana is operating normally across the monitored network and ecosystem baselines.
+Solana is online with 1 unusual signal under watch.
 
 ## Network
 
 | Metric | Value |
 | --- | ---: |
-| TPS | 1,251.07 |
-| Non-vote TPS | 1,251.07 |
-| Median slot time | 215.05 ms |
+| TPS | 1,992.42 |
+| Non-vote TPS | 1,992.42 |
+| Median slot time | 218.18 ms |
 | Median transaction fee | 5,000 lamports |
 | Median priority fee | 0 micro-lamports / compute unit |
-| Block height | 444,949,857 |
-| Epoch | 1080 (86.01%) |
-| Active validators | 663 |
-| Delinquent validators | 34 (4.88%) |
+| Block height | 445,401,243 |
+| Epoch | 1081 (90.60%) |
+| Active validators | 661 |
+| Delinquent validators | 36 (5.16%) |
 
 ## Economy
 
 | Metric | Value |
 | --- | ---: |
-| SOL price | $89.63 (-0.14% 24h) |
-| Solana DeFi TVL | $5,196,208,248.00 |
-| DEX volume | $917,438,831.61 24h / $11,620,646,177.19 7d |
-| Stablecoin supply | $14,852,498,478.07 |
+| SOL price | $87.08 (-2.70% 24h) |
+| Solana DeFi TVL | $5,065,236,236.00 |
+| DEX volume | $1,043,374,478.30 24h / $11,758,418,357.30 7d |
+| Stablecoin supply | $14,983,788,914.46 |
 
 ## Network activity and fees
 
@@ -40,11 +40,11 @@ Multi-provider median for 2026-08-30, calculated from 8 public providers surface
 | Fee payers | 2,078,143 |
 | Total transactions | 331,017,665 |
 | Non-vote failure rate | 39.92% |
-| Network fees | 6,614.98 SOL / $592,901.05 |
+| Network fees | 6,614.98 SOL / $576,032.84 |
 
 ## Signals
 
-- **INFO — Validator participation healthy:** Observed validator delinquency is 4.9%.
+- **WATCH — Validator delinquency elevated:** Observed validator delinquency is 5.2%.
 
 ## Protocol roadmap
 
