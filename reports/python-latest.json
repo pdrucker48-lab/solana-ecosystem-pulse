@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-11-14T13:33:36.682340Z",
+  "generatedAt": "2026-11-15T13:57:35.622642Z",
   "state": "live",
   "briefing": "Solana is online with 1 unusual signal under watch.",
   "network": {
-    "tps": 1323.5333333333333,
-    "slotTimeMs": 213.52313167259788,
-    "blockHeight": 447361133,
-    "epoch": 1086,
-    "epochProgress": 44.917129629629635,
-    "epochEtaSeconds": 50809.537366548044,
+    "tps": 1172.8666666666666,
+    "slotTimeMs": 215.05376344086022,
+    "blockHeight": 447769496,
+    "epoch": 1087,
+    "epochProgress": 39.46921296296296,
+    "epochEtaSeconds": 56235.05376344086,
     "activeValidators": 662,
-    "delinquentValidators": 37,
-    "delinquentPercent": 5.293276108726753,
-    "supplySol": 637554793.032145,
+    "delinquentValidators": 38,
+    "delinquentPercent": 5.428571428571429,
+    "supplySol": 637615855.9419086,
     "medianTransactionFeeLamports": 5000,
     "medianPriorityFeeMicroLamports": 0.0
   },
   "economy": {
-    "solPrice": 75.26,
-    "solPriceChange24h": -7.179429559897385,
-    "tvl": 4811014307,
-    "tvlChange1d": -3.765057855721079,
-    "tvlChange7d": -7.936801198171165,
-    "tvlChange30d": -18.722729196856232,
-    "dexVolume24h": 1560618093.2,
-    "dexVolume7d": 9469491342.719997,
-    "stablecoinSupply": 14140923796.39
+    "solPrice": 72.75,
+    "solPriceChange24h": -3.631103907935735,
+    "tvl": 4694915992,
+    "tvlChange1d": -3.253704886483718,
+    "tvlChange7d": -9.398785977277198,
+    "tvlChange30d": -21.295288978575396,
+    "dexVolume24h": 1692508944.7,
+    "dexVolume7d": 10244561360.809998,
+    "stablecoinSupply": 14138697428.97
   },
   "activity": {
     "observedDate": "2026-08-30",
     "activeAddresses": 725539,
     "feePayers": 2078143,
     "networkFeesSol": 6614.984404558824,
-    "networkFeesUsd": 497843.72628709715,
+    "networkFeesUsd": 481240.11543165444,
     "totalTransactions": 331017665,
     "successfulNonVoteTransactions": 87991006,
     "failedNonVoteTransactions": 58461005,
@@ -93,75 +93,75 @@
   "performance": [
     {
       "label": "11m",
-      "tps": 1151.0333333333333,
-      "nonVoteTps": 1151.0333333333333,
-      "slotTimeMs": 213.52313167259788
-    },
-    {
-      "label": "10m",
-      "tps": 1326.75,
-      "nonVoteTps": 1326.75,
-      "slotTimeMs": 212.01413427561837
-    },
-    {
-      "label": "9m",
-      "tps": 1470.0833333333333,
-      "nonVoteTps": 1470.0833333333333,
-      "slotTimeMs": 220.58823529411765
-    },
-    {
-      "label": "8m",
-      "tps": 1507.7666666666667,
-      "nonVoteTps": 1507.7666666666667,
-      "slotTimeMs": 212.01413427561837
-    },
-    {
-      "label": "7m",
-      "tps": 1453.7833333333333,
-      "nonVoteTps": 1453.7833333333333,
+      "tps": 1050.8,
+      "nonVoteTps": 1050.8,
       "slotTimeMs": 214.28571428571428
     },
     {
-      "label": "6m",
-      "tps": 1255.3333333333333,
-      "nonVoteTps": 1255.3333333333333,
-      "slotTimeMs": 212.01413427561837
-    },
-    {
-      "label": "5m",
-      "tps": 1325.3666666666666,
-      "nonVoteTps": 1325.3666666666666,
-      "slotTimeMs": 215.82733812949638
-    },
-    {
-      "label": "4m",
-      "tps": 1381.85,
-      "nonVoteTps": 1381.85,
+      "label": "10m",
+      "tps": 1213.95,
+      "nonVoteTps": 1213.95,
       "slotTimeMs": 216.60649819494586
     },
     {
-      "label": "3m",
-      "tps": 1245.3333333333333,
-      "nonVoteTps": 1245.3333333333333,
-      "slotTimeMs": 212.7659574468085
+      "label": "9m",
+      "tps": 1437.1,
+      "nonVoteTps": 1437.1,
+      "slotTimeMs": 214.28571428571428
     },
     {
-      "label": "2m",
-      "tps": 1210.0,
-      "nonVoteTps": 1210.0,
-      "slotTimeMs": 218.97810218978103
+      "label": "8m",
+      "tps": 1514.6333333333334,
+      "nonVoteTps": 1514.6333333333334,
+      "slotTimeMs": 211.26760563380282
     },
     {
-      "label": "1m",
-      "tps": 1200.3,
-      "nonVoteTps": 1200.3,
+      "label": "7m",
+      "tps": 1263.3166666666666,
+      "nonVoteTps": 1263.3166666666666,
+      "slotTimeMs": 216.60649819494586
+    },
+    {
+      "label": "6m",
+      "tps": 1183.25,
+      "nonVoteTps": 1183.25,
+      "slotTimeMs": 213.52313167259788
+    },
+    {
+      "label": "5m",
+      "tps": 1278.4333333333334,
+      "nonVoteTps": 1278.4333333333334,
+      "slotTimeMs": 213.52313167259788
+    },
+    {
+      "label": "4m",
+      "tps": 1354.05,
+      "nonVoteTps": 1354.05,
       "slotTimeMs": 217.3913043478261
     },
     {
-      "label": "now",
-      "tps": 1323.5333333333333,
-      "nonVoteTps": 1323.5333333333333,
+      "label": "3m",
+      "tps": 1526.6333333333334,
+      "nonVoteTps": 1526.6333333333334,
+      "slotTimeMs": 218.18181818181816
+    },
+    {
+      "label": "2m",
+      "tps": 1369.5833333333333,
+      "nonVoteTps": 1369.5833333333333,
       "slotTimeMs": 213.52313167259788
+    },
+    {
+      "label": "1m",
+      "tps": 1181.2833333333333,
+      "nonVoteTps": 1181.2833333333333,
+      "slotTimeMs": 206.18556701030926
+    },
+    {
+      "label": "now",
+      "tps": 1172.8666666666666,
+      "nonVoteTps": 1172.8666666666666,
+      "slotTimeMs": 215.05376344086022
     }
   ],
   "activityHistory": [
@@ -216,10 +216,6 @@
     }
   ],
   "tvlHistory": [
-    {
-      "date": "2026-10-15",
-      "tvl": 5919261633
-    },
     {
       "date": "2026-10-16",
       "tvl": 5965228677
@@ -338,7 +334,11 @@
     },
     {
       "date": "2026-11-14",
-      "tvl": 4811014307
+      "tvl": 4852812179
+    },
+    {
+      "date": "2026-11-15",
+      "tvl": 4694915992
     }
   ],
   "validators": [
@@ -396,7 +396,7 @@
     {
       "severity": "watch",
       "title": "Validator delinquency elevated",
-      "detail": "Observed validator delinquency is 5.3%."
+      "detail": "Observed validator delinquency is 5.4%."
     }
   ],
   "releases": [
