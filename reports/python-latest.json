@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-11-16T15:50:12.863490Z",
+  "generatedAt": "2026-11-17T16:02:01.592404Z",
   "state": "live",
-  "briefing": "Solana is online with 1 unusual signal under watch.",
+  "briefing": "Solana is operating normally across the monitored network and ecosystem baselines.",
   "network": {
-    "tps": 2172.5833333333335,
-    "slotTimeMs": 215.05376344086022,
-    "blockHeight": 448202863,
-    "epoch": 1088,
-    "epochProgress": 39.81087962962963,
-    "epochEtaSeconds": 55917.634408602156,
-    "activeValidators": 660,
-    "delinquentValidators": 39,
-    "delinquentPercent": 5.579399141630901,
-    "supplySol": 637676911.5057206,
+    "tps": 3038.4,
+    "slotTimeMs": 216.60649819494586,
+    "blockHeight": 448608248,
+    "epoch": 1089,
+    "epochProgress": 33.66712962962963,
+    "epochEtaSeconds": 62070.324909747294,
+    "activeValidators": 661,
+    "delinquentValidators": 5,
+    "delinquentPercent": 0.7507507507507507,
+    "supplySol": 637737931.8856974,
     "medianTransactionFeeLamports": 5000,
     "medianPriorityFeeMicroLamports": 0.0
   },
   "economy": {
-    "solPrice": 70.74,
-    "solPriceChange24h": -0.5300766894031032,
-    "tvl": 4672087305,
-    "tvlChange1d": 1.0328702227002393,
-    "tvlChange7d": -8.29387708597048,
-    "tvlChange30d": -20.92817513468317,
-    "dexVolume24h": 1352559060.0900002,
-    "dexVolume7d": 10553745942.6,
-    "stablecoinSupply": 14255677536.53
+    "solPrice": 72.31,
+    "solPriceChange24h": 2.192684089953022,
+    "tvl": 4771355689,
+    "tvlChange1d": 2.0239349305014707,
+    "tvlChange7d": -5.58605310397951,
+    "tvlChange30d": -18.862959237651786,
+    "dexVolume24h": 1479923822.31,
+    "dexVolume7d": 10545896970.589998,
+    "stablecoinSupply": 14251693659.92
   },
   "activity": {
     "observedDate": "2026-08-30",
     "activeAddresses": 725539,
     "feePayers": 2078143,
     "networkFeesSol": 6614.984404558824,
-    "networkFeesUsd": 467943.9967784912,
+    "networkFeesUsd": 478329.5222936486,
     "totalTransactions": 331017665,
     "successfulNonVoteTransactions": 87991006,
     "failedNonVoteTransactions": 58461005,
@@ -93,75 +93,75 @@
   "performance": [
     {
       "label": "11m",
-      "tps": 2521.6,
-      "nonVoteTps": 2521.6,
-      "slotTimeMs": 213.52313167259788
+      "tps": 2745.8333333333335,
+      "nonVoteTps": 2745.8333333333335,
+      "slotTimeMs": 212.01413427561837
     },
     {
       "label": "10m",
-      "tps": 1916.2666666666667,
-      "nonVoteTps": 1916.2666666666667,
-      "slotTimeMs": 212.7659574468085
+      "tps": 2696.883333333333,
+      "nonVoteTps": 2696.883333333333,
+      "slotTimeMs": 217.3913043478261
     },
     {
       "label": "9m",
-      "tps": 1969.4833333333333,
-      "nonVoteTps": 1969.4833333333333,
-      "slotTimeMs": 216.60649819494586
-    },
-    {
-      "label": "8m",
-      "tps": 2170.366666666667,
-      "nonVoteTps": 2170.366666666667,
-      "slotTimeMs": 212.7659574468085
-    },
-    {
-      "label": "7m",
-      "tps": 2258.1,
-      "nonVoteTps": 2258.0833333333335,
+      "tps": 2572.65,
+      "nonVoteTps": 2572.65,
       "slotTimeMs": 214.28571428571428
     },
     {
-      "label": "6m",
-      "tps": 2100.5333333333333,
-      "nonVoteTps": 2100.5333333333333,
-      "slotTimeMs": 213.52313167259788
-    },
-    {
-      "label": "5m",
-      "tps": 2774.3333333333335,
-      "nonVoteTps": 2774.3333333333335,
+      "label": "8m",
+      "tps": 2796.25,
+      "nonVoteTps": 2796.25,
       "slotTimeMs": 215.82733812949638
     },
     {
+      "label": "7m",
+      "tps": 2803.7166666666667,
+      "nonVoteTps": 2803.7166666666667,
+      "slotTimeMs": 215.82733812949638
+    },
+    {
+      "label": "6m",
+      "tps": 3143.25,
+      "nonVoteTps": 3143.25,
+      "slotTimeMs": 216.60649819494586
+    },
+    {
+      "label": "5m",
+      "tps": 3364.2166666666667,
+      "nonVoteTps": 3364.2166666666667,
+      "slotTimeMs": 216.60649819494586
+    },
+    {
       "label": "4m",
-      "tps": 3039.1666666666665,
-      "nonVoteTps": 3039.15,
-      "slotTimeMs": 218.97810218978103
+      "tps": 3314.9166666666665,
+      "nonVoteTps": 3314.9166666666665,
+      "slotTimeMs": 211.26760563380282
     },
     {
       "label": "3m",
-      "tps": 2633.766666666667,
-      "nonVoteTps": 2633.766666666667,
-      "slotTimeMs": 215.05376344086022
+      "tps": 2398.85,
+      "nonVoteTps": 2398.85,
+      "slotTimeMs": 219.78021978021977
     },
     {
       "label": "2m",
-      "tps": 2500.75,
-      "nonVoteTps": 2500.75,
-      "slotTimeMs": 218.97810218978103
+      "tps": 2917.2833333333333,
+      "nonVoteTps": 2917.2833333333333,
+      "slotTimeMs": 213.52313167259788
     },
     {
       "label": "1m",
-      "tps": 2325.0666666666666,
-      "nonVoteTps": 2325.0666666666666,
-      "slotTimeMs": 212.7659574468085
+      "tps": 2774.05,
+      "nonVoteTps": 2774.05,
+      "slotTimeMs": 215.05376344086022
     },
     {
       "label": "now",
-      "tps": 2172.5833333333335,
-      "nonVoteTps": 2172.5833333333335,
-      "slotTimeMs": 215.05376344086022
+      "tps": 3038.4,
+      "nonVoteTps": 3038.4,
+      "slotTimeMs": 216.60649819494586
     }
   ],
   "activityHistory": [
@@ -216,10 +216,6 @@
     }
   ],
   "tvlHistory": [
-    {
-      "date": "2026-10-17",
-      "tvl": 5908662552
-    },
     {
       "date": "2026-10-18",
       "tvl": 5880613397
@@ -334,11 +330,15 @@
     },
     {
       "date": "2026-11-15",
-      "tvl": 4624324039
+      "tvl": 4614916665
     },
     {
       "date": "2026-11-16",
-      "tvl": 4672087305
+      "tvl": 4676702278
+    },
+    {
+      "date": "2026-11-17",
+      "tvl": 4771355689
     }
   ],
   "validators": [
@@ -394,9 +394,9 @@
   ],
   "signals": [
     {
-      "severity": "watch",
-      "title": "Validator delinquency elevated",
-      "detail": "Observed validator delinquency is 5.6%."
+      "severity": "info",
+      "title": "Validator participation healthy",
+      "detail": "Observed validator delinquency is 0.8%."
     }
   ],
   "releases": [
@@ -482,6 +482,6 @@
   "generationErrors": {
     "releases": "HTTP Error 403: rate limit exceeded",
     "solana_data": "HTTP Error 429: Too Many Requests",
-    "block_fee": "Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: \"maxSupportedTransactionVersion\": 1"
+    "block_fee": "Block not available for slot 470593424"
   }
 }
