@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-11-21T14:41:17.648080Z",
+  "generatedAt": "2026-11-22T14:37:02.315378Z",
   "state": "live",
   "briefing": "Solana is operating normally across the monitored network and ecosystem baselines.",
   "network": {
-    "tps": 1561.4833333333333,
-    "slotTimeMs": 214.28571428571428,
-    "blockHeight": 450190104,
+    "tps": 1106.4,
+    "slotTimeMs": 213.52313167259788,
+    "blockHeight": 450590590,
     "epoch": 1093,
-    "epochProgress": 0.03356481481481481,
-    "epochEtaSeconds": 92540.35714285713,
+    "epochProgress": 92.75833333333333,
+    "epochEtaSeconds": 6679.857651245552,
     "activeValidators": 661,
     "delinquentValidators": 24,
     "delinquentPercent": 3.5036496350364965,
-    "supplySol": 637947549.1303977,
+    "supplySol": 637981279.821621,
     "medianTransactionFeeLamports": 5000,
     "medianPriorityFeeMicroLamports": 0.0
   },
   "economy": {
-    "solPrice": 70.28,
-    "solPriceChange24h": -0.9373021205313111,
-    "tvl": 4534222379,
-    "tvlChange1d": -3.7524989687933115,
-    "tvlChange7d": -6.56505517719423,
-    "tvlChange30d": -23.95121739581631,
-    "dexVolume24h": 1884688072.35,
-    "dexVolume7d": 11638827410.349998,
-    "stablecoinSupply": 13178106125.74
+    "solPrice": 70.08,
+    "solPriceChange24h": -0.2534694983624161,
+    "tvl": 4616768533,
+    "tvlChange1d": 1.4738737293087238,
+    "tvlChange7d": 0.042328325896010176,
+    "tvlChange30d": -21.02534484076963,
+    "dexVolume24h": 1345931988.87,
+    "dexVolume7d": 11292250241.519999,
+    "stablecoinSupply": 13283567105.58
   },
   "activity": {
     "observedDate": "2026-08-30",
     "activeAddresses": 725539,
     "feePayers": 2078143,
     "networkFeesSol": 6614.984404558824,
-    "networkFeesUsd": 464901.10395239416,
+    "networkFeesUsd": 463578.1070714824,
     "totalTransactions": 331017665,
     "successfulNonVoteTransactions": 87991006,
     "failedNonVoteTransactions": 58461005,
@@ -93,75 +93,75 @@
   "performance": [
     {
       "label": "11m",
-      "tps": 1589.1333333333334,
-      "nonVoteTps": 1589.1333333333334,
-      "slotTimeMs": 212.01413427561837
+      "tps": 1389.65,
+      "nonVoteTps": 1389.65,
+      "slotTimeMs": 214.28571428571428
     },
     {
       "label": "10m",
-      "tps": 1454.85,
-      "nonVoteTps": 1454.85,
-      "slotTimeMs": 212.01413427561837
+      "tps": 990.2666666666667,
+      "nonVoteTps": 990.2666666666667,
+      "slotTimeMs": 219.78021978021977
     },
     {
       "label": "9m",
-      "tps": 1681.0,
-      "nonVoteTps": 1681.0,
-      "slotTimeMs": 212.7659574468085
+      "tps": 950.4333333333333,
+      "nonVoteTps": 950.4333333333333,
+      "slotTimeMs": 215.82733812949638
     },
     {
       "label": "8m",
-      "tps": 1612.5,
-      "nonVoteTps": 1612.5,
+      "tps": 1034.0,
+      "nonVoteTps": 1034.0,
       "slotTimeMs": 214.28571428571428
     },
     {
       "label": "7m",
-      "tps": 1570.8,
-      "nonVoteTps": 1570.8,
-      "slotTimeMs": 218.97810218978103
-    },
-    {
-      "label": "6m",
-      "tps": 1748.5666666666666,
-      "nonVoteTps": 1748.5666666666666,
+      "tps": 1132.5166666666667,
+      "nonVoteTps": 1132.5166666666667,
       "slotTimeMs": 215.82733812949638
     },
     {
+      "label": "6m",
+      "tps": 1283.3166666666666,
+      "nonVoteTps": 1283.3166666666666,
+      "slotTimeMs": 212.01413427561837
+    },
+    {
       "label": "5m",
-      "tps": 2023.35,
-      "nonVoteTps": 2023.35,
-      "slotTimeMs": 212.7659574468085
+      "tps": 1313.95,
+      "nonVoteTps": 1313.95,
+      "slotTimeMs": 214.28571428571428
     },
     {
       "label": "4m",
-      "tps": 1928.7333333333333,
-      "nonVoteTps": 1928.7333333333333,
-      "slotTimeMs": 218.18181818181816
+      "tps": 1315.4,
+      "nonVoteTps": 1315.4,
+      "slotTimeMs": 215.05376344086022
     },
     {
       "label": "3m",
-      "tps": 1771.1166666666666,
-      "nonVoteTps": 1771.1166666666666,
-      "slotTimeMs": 219.78021978021977
+      "tps": 1090.0833333333333,
+      "nonVoteTps": 1090.0833333333333,
+      "slotTimeMs": 214.28571428571428
     },
     {
       "label": "2m",
-      "tps": 1861.05,
-      "nonVoteTps": 1861.05,
-      "slotTimeMs": 211.26760563380282
+      "tps": 1293.7333333333333,
+      "nonVoteTps": 1293.7333333333333,
+      "slotTimeMs": 212.7659574468085
     },
     {
       "label": "1m",
-      "tps": 1677.7166666666667,
-      "nonVoteTps": 1677.7166666666667,
-      "slotTimeMs": 214.28571428571428
+      "tps": 1263.8666666666666,
+      "nonVoteTps": 1263.8666666666666,
+      "slotTimeMs": 212.7659574468085
     },
     {
       "label": "now",
-      "tps": 1561.4833333333333,
-      "nonVoteTps": 1561.4833333333333,
-      "slotTimeMs": 214.28571428571428
+      "tps": 1106.4,
+      "nonVoteTps": 1106.4,
+      "slotTimeMs": 213.52313167259788
     }
   ],
   "activityHistory": [
@@ -216,10 +216,6 @@
     }
   ],
   "tvlHistory": [
-    {
-      "date": "2026-10-22",
-      "tvl": 5962255047
-    },
     {
       "date": "2026-10-23",
       "tvl": 5845886283
@@ -338,7 +334,11 @@
     },
     {
       "date": "2026-11-21",
-      "tvl": 4534222379
+      "tvl": 4549711530
+    },
+    {
+      "date": "2026-11-22",
+      "tvl": 4616768533
     }
   ],
   "validators": [
