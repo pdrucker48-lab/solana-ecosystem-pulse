@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-11-27T16:41:43.058193Z",
+  "generatedAt": "2026-11-28T15:33:44.832772Z",
   "state": "live",
   "briefing": "Solana is operating normally across the monitored network and ecosystem baselines.",
   "network": {
-    "tps": 1944.05,
-    "slotTimeMs": 214.28571428571428,
-    "blockHeight": 452633590,
-    "epoch": 1098,
-    "epochProgress": 65.95810185185185,
-    "epochEtaSeconds": 31513.071428571428,
-    "activeValidators": 654,
-    "delinquentValidators": 34,
-    "delinquentPercent": 4.941860465116279,
-    "supplySol": 638285472.9295971,
+    "tps": 1620.8,
+    "slotTimeMs": 215.82733812949638,
+    "blockHeight": 453017707,
+    "epoch": 1099,
+    "epochProgress": 54.924537037037034,
+    "epochEtaSeconds": 42027.19424460431,
+    "activeValidators": 655,
+    "delinquentValidators": 10,
+    "delinquentPercent": 1.5037593984962405,
+    "supplySol": 638346359.6329931,
     "medianTransactionFeeLamports": 5000,
     "medianPriorityFeeMicroLamports": 0.0
   },
   "economy": {
-    "solPrice": 72.24,
-    "solPriceChange24h": 2.0906978021789717,
-    "tvl": 4612461131,
-    "tvlChange1d": 0.6775927126548118,
-    "tvlChange7d": -2.091732527633209,
-    "tvlChange30d": -18.984229031678368,
-    "dexVolume24h": 870578806.1700001,
-    "dexVolume7d": 9850712187.290003,
-    "stablecoinSupply": 12607974345.69
+    "solPrice": 70.48,
+    "solPriceChange24h": -1.584655982380603,
+    "tvl": 4552270482,
+    "tvlChange1d": -1.6332530709307107,
+    "tvlChange7d": 0.056244269183369514,
+    "tvlChange30d": -20.061089583970258,
+    "dexVolume24h": 1031504044.38,
+    "dexVolume7d": 8997528446.320002,
+    "stablecoinSupply": 13303988283.79
   },
   "activity": {
     "observedDate": "2026-08-30",
     "activeAddresses": 725539,
     "feePayers": 2078143,
     "networkFeesSol": 6614.984404558824,
-    "networkFeesUsd": 477866.4733853294,
+    "networkFeesUsd": 466224.100833306,
     "totalTransactions": 331017665,
     "successfulNonVoteTransactions": 87991006,
     "failedNonVoteTransactions": 58461005,
@@ -93,75 +93,75 @@
   "performance": [
     {
       "label": "11m",
-      "tps": 2169.8333333333335,
-      "nonVoteTps": 2169.8333333333335,
-      "slotTimeMs": 217.3913043478261
+      "tps": 1458.1666666666667,
+      "nonVoteTps": 1458.1666666666667,
+      "slotTimeMs": 211.26760563380282
     },
     {
       "label": "10m",
-      "tps": 2097.0,
-      "nonVoteTps": 2097.0,
-      "slotTimeMs": 213.52313167259788
+      "tps": 1521.0666666666666,
+      "nonVoteTps": 1521.0666666666666,
+      "slotTimeMs": 212.01413427561837
     },
     {
       "label": "9m",
-      "tps": 2186.883333333333,
-      "nonVoteTps": 2186.883333333333,
-      "slotTimeMs": 217.3913043478261
+      "tps": 1539.7,
+      "nonVoteTps": 1539.7,
+      "slotTimeMs": 215.82733812949638
     },
     {
       "label": "8m",
-      "tps": 2180.4333333333334,
-      "nonVoteTps": 2180.4333333333334,
-      "slotTimeMs": 214.28571428571428
+      "tps": 1562.8166666666666,
+      "nonVoteTps": 1562.8166666666666,
+      "slotTimeMs": 215.05376344086022
     },
     {
       "label": "7m",
-      "tps": 2961.8,
-      "nonVoteTps": 2961.8,
+      "tps": 1358.0333333333333,
+      "nonVoteTps": 1358.0333333333333,
       "slotTimeMs": 215.05376344086022
     },
     {
       "label": "6m",
-      "tps": 2847.6666666666665,
-      "nonVoteTps": 2847.6666666666665,
-      "slotTimeMs": 209.7902097902098
+      "tps": 1096.55,
+      "nonVoteTps": 1096.55,
+      "slotTimeMs": 211.26760563380282
     },
     {
       "label": "5m",
-      "tps": 2350.516666666667,
-      "nonVoteTps": 2350.516666666667,
-      "slotTimeMs": 214.28571428571428
+      "tps": 1238.15,
+      "nonVoteTps": 1238.15,
+      "slotTimeMs": 218.18181818181816
     },
     {
       "label": "4m",
-      "tps": 1953.4166666666667,
-      "nonVoteTps": 1953.4166666666667,
+      "tps": 1517.3666666666666,
+      "nonVoteTps": 1517.3666666666666,
       "slotTimeMs": 215.05376344086022
     },
     {
       "label": "3m",
-      "tps": 2276.95,
-      "nonVoteTps": 2276.95,
+      "tps": 1803.0833333333333,
+      "nonVoteTps": 1803.0833333333333,
       "slotTimeMs": 212.01413427561837
     },
     {
       "label": "2m",
-      "tps": 2029.1,
-      "nonVoteTps": 2029.0833333333333,
-      "slotTimeMs": 223.04832713754647
+      "tps": 1698.6,
+      "nonVoteTps": 1698.6,
+      "slotTimeMs": 210.52631578947367
     },
     {
       "label": "1m",
-      "tps": 2121.0833333333335,
-      "nonVoteTps": 2121.0833333333335,
-      "slotTimeMs": 214.28571428571428
+      "tps": 2074.65,
+      "nonVoteTps": 2074.65,
+      "slotTimeMs": 212.01413427561837
     },
     {
       "label": "now",
-      "tps": 1944.05,
-      "nonVoteTps": 1944.05,
-      "slotTimeMs": 214.28571428571428
+      "tps": 1620.8,
+      "nonVoteTps": 1620.8,
+      "slotTimeMs": 215.82733812949638
     }
   ],
   "activityHistory": [
@@ -216,10 +216,6 @@
     }
   ],
   "tvlHistory": [
-    {
-      "date": "2026-10-28",
-      "tvl": 5693287956
-    },
     {
       "date": "2026-10-29",
       "tvl": 5694686678
@@ -338,7 +334,11 @@
     },
     {
       "date": "2026-11-27",
-      "tvl": 4612461131
+      "tvl": 4627855067
+    },
+    {
+      "date": "2026-11-28",
+      "tvl": 4552270482
     }
   ],
   "validators": [
@@ -396,10 +396,22 @@
     {
       "severity": "info",
       "title": "Validator participation healthy",
-      "detail": "Observed validator delinquency is 4.9%."
+      "detail": "Observed validator delinquency is 1.5%."
     }
   ],
   "releases": [
+    {
+      "title": "Release v4.5.0-rc.1",
+      "tag": "v4.5.0-rc.1",
+      "publishedAt": "2026-11-27T18:56:05Z",
+      "url": "https://github.com/anza-xyz/agave/releases/tag/v4.5.0-rc.1"
+    },
+    {
+      "title": "Release v4.4.2",
+      "tag": "v4.4.2",
+      "publishedAt": "2026-11-27T19:04:56Z",
+      "url": "https://github.com/anza-xyz/agave/releases/tag/v4.4.2"
+    },
     {
       "title": "Release v4.5.0-rc.0",
       "tag": "v4.5.0-rc.0",
@@ -411,18 +423,6 @@
       "tag": "v5.0.0-alpha.1",
       "publishedAt": "2026-11-19T20:57:32Z",
       "url": "https://github.com/anza-xyz/agave/releases/tag/v5.0.0-alpha.1"
-    },
-    {
-      "title": "Release v4.5.0-beta.0",
-      "tag": "v4.5.0-beta.0",
-      "publishedAt": "2026-11-06T08:17:22Z",
-      "url": "https://github.com/anza-xyz/agave/releases/tag/v4.5.0-beta.0"
-    },
-    {
-      "title": "Release v4.4.1",
-      "tag": "v4.4.1",
-      "publishedAt": "2026-11-05T18:33:50Z",
-      "url": "https://github.com/anza-xyz/agave/releases/tag/v4.4.1"
     }
   ],
   "developments": [
